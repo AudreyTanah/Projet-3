@@ -57,40 +57,24 @@ h1 {
   box-shadow: inset 2px #9356DC;
 }
 
-/*retirer le point derriere les chiffres de la liste*/
-.nav-working {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-  counter-reset: compteListe;
-}
-
-.working-nav-bar::before {
-  counter-increment: compteListe 1;
-  content: counter(compteListe) "";
-  width: 18px;
-  padding: 3px;
-  border-radius: 30px;
-  text-align: center;
-  background-color: #9356DC;
-  color: white;
-  position: relative;
-  right: 20px;
-}
-
-.working-nav-bar {
+.choosing-restaurant, .menu-composition, .degustation {
   display: flex;
-  align-items: center;
-  margin: 0px 30px 20px 30px;
-  padding: 7px;
-  background-color: #F2F2F2;
+  padding: 2px;
   border: 2px #F2F2F2 solid;
-  box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+  box-shadow: 6px 6px 0px 0px #F2F2F2;
   border-radius: 20px;
 }
 
-#pictogram-1, #pictogram-2, #pictogram-3 {
-  margin-right: 10px;
+.pictogram {
+  display: flex;
+  align-items: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+.number {
+  background-color: #9356DC;
+  border-radius: 5px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

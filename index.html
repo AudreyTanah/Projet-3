@@ -17,36 +17,37 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo">
+        <div class="logo">
+        <img class="oh-my-food" src="images/logo/ohmyfood@2x.svg" alt="logo">
+        </div>
         <div class="city-research">
             <div class="location-dot"><i class="fa-solid fa-location-dot"></i></div>
-            <form method="post">
                 <div class="ville">
-                    <label for="ville"></label><input class="city" type="text" name="ville"
+                    <form><label for= "ville"></label><input class="city" type="text" name="ville"
                         id="ville" placeholder="Paris, Belleville"/>
+                    </form>
                 </div>
-            </form>
+            </div>
             <div class="reserve"><h1 class="title-reserve">Réservez le menu qui vous convient</h1></div>
             <div class="discover"><p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p></div>
             <div class="explore"><p>Explorer nos restaurants</p></div>
     </header>
     <nav class="working">
         <h1 class="title-working">Fonctionnement</h1>
-        <div class="choosing-restaurant">
-            <div class="number"><p>1</p></div>
-            <div class="pictogram"><i class="fa-solid fa-mobile-screen"></i>></i></div>
-            <div class="choose"><p>Choisissez un restaurant</p></div>
-        </div>
-        <div class="menu-composition">
-            <div class="number"><p>2</p></div>
-            <div class="pictogram"><i class="fa-sharp fa-solid fa-list"></i>></i></div>
-            <div class="composition"><p>Composez votre menu</p></div>
-        </div>
-        <div class="degustation">
-            <div class="number"><p>3</p></div>
-            <div class="pictogram"><i class="fa-solid fa-store"></i></div>
-            <div class="savour"><p>Dégustez au restaurant</p></div>
-        </div>
+        <ol class="nav-working">
+        <li class="working-nav-bar">
+            <i class="fa-solid fa-mobile-screen" id="pictogram-1"></i>
+            <p>Choisissez un restaurant</p>
+        </li>
+        <li class="working-nav-bar">
+            <i class="fa-sharp fa-solid fa-list" id="pictogram-2"></i>
+            <p>Composez votre menu</p>
+        </li>
+        <li class="working-nav-bar">
+            <i class="fa-solid fa-store" id="pictogram-3"></i>
+            <p>Dégustez au restaurant</p></div>
+        </li>
+    </ol>
     </nav>
 
     <section class="restaurant">
