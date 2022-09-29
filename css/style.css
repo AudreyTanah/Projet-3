@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100%;
   margin: 0px;
@@ -40,8 +41,19 @@ h1 {
   background-color: #F2F2F2;
 }
 
+.contain-1-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .reserve {
-  margin-top: 30px;
+  margin: 30px 30px 10px 30px;
+}
+
+.discover {
+  margin: 20px;
 }
 
 .reserve, .discover, .explore {
@@ -50,7 +62,7 @@ h1 {
 
 .explore {
   margin: 30px 70px;
-  padding: 1px;
+  padding: 1px 30px;
   color: white;
   background-color: #FF79DA;
   border-radius: 30px;
@@ -88,9 +100,87 @@ h1 {
   box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
   border-radius: 20px;
 }
+.working-nav-bar:hover {
+  background-color: #e9ebec;
+}
 
 #pictogram-1, #pictogram-2, #pictogram-3 {
   margin-right: 10px;
+  color: gray;
+}
+#pictogram-1:hover, #pictogram-2:hover, #pictogram-3:hover {
+  color: #9356DC;
+}
+
+/*section restaurant*/
+main {
+  background-color: #F2F2F2;
+}
+
+.restaurant {
+  margin: 20px;
+  padding: 20px;
+}
+
+/*positionnement logo new card-1 et card-2*/
+.logo-new {
+  width: 100px;
+  position: absolute;
+  color: green;
+  background-color: #99E2D0;
+  text-align: center;
+  z-index: 99;
+  right: 50px;
+  margin-top: 10px;
+}
+
+/*Intégration des quatre cards restaurant*/
+.card-1, .card-2, .card-3, .card-4 {
+  width: 100%;
+  height: 250px;
+  border: 2px black solid;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/*pour que le coeur ressorte sur la card-1 et card-2 car espace provoqué par le logo new mis en position relative*/
+.restaurant-name-and-place-with-logo-new {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  margin-top: 10px;
+}
+
+.restaurant-name-and-place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  margin-top: 10px;
+}
+
+.picture-container {
+  width: 100%;
+  height: 180px;
+}
+
+.homepage-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+/*retirer les margin et padding par défaut afin que name and place soient plus proches*/
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.place {
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

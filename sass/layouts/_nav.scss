@@ -27,7 +27,15 @@
     border: 2px #F2F2F2 solid;
     box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
     border-radius: 20px;
+    &:hover {
+      background-color: #e9ebec;
+    }
 }
 #pictogram-1, #pictogram-2, #pictogram-3 {
     margin-right: 10px;
+    color: gray;
+      &:hover {
+        color: $primary-color;
+      }
 }
+
