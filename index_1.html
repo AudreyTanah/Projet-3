@@ -16,101 +16,124 @@
     <title>Projet3</title>
 </head>
 <body>
-    <header>
+    <header class="header-pages">
     <div class="arrow-and-logo">
         <div class="arrow"><i class="fa-solid fa-arrow-left"></i></div>
-        <img class="oh-my-food" src="images/logo/ohmyfood.png" alt="logo">
+        <p class="page-ohmyfood-logo">ohmyfood</p>
+    </div>
+    <div class="picture-page-container">
+    <img class="page-picture" id="french-menu-pic" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="french">
     </div>
     </header>
 
-    <div class="picture-page-container">
-        <img class="page-picture" id="french-menu-pic" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="french">
-    </div>
-    
-    <main class="french-menu">
+    <main class="menu">
       <div class="page-title">
-        <h1 class="french-title">A la française</h1>
-        <i class="heart-page" class="fa-light fa-heart"></i>
+        <h1 class="title-menu">A la française</h1>
+        <i id="heart-page-1" class="fa-regular fa-heart"></i>
       </div>
 
-      <section class="entry">
+      <section class="entry-section">
         <div class="beginning-entry">
-        <h2 class="title-section">Entrées</h2>
+        <h2 class="title-section">ENTREES</h2>
         <div class="bar"></div>
         </div>
-        <div class="entry-one">
+        <div class="entry">
+            <div class="plate-and-side-dish">
             <h2 class="entry-plate-dessert-title">Tartare de poulpe acidulé</h2>
             <p class="specification-seasoning-or-side-dish">Aux zestes d'orange</p>
+            </div>
             <p class="price">25€</p>
+            <div class="check-container">
+                <i class="check" class="fa-solid fa-check"></i>
+                </div>
         </div>
-        <div class="entry-two">
+        <div class="entry">
+            <div class="plate-and-side-dish">
             <h2 class="entry-plate-dessert-title">Velouté de légumes d'antan</h2>
             <p class="specification-seasoning-or-side-dish">Carotte, panais, topinambour</p>
+            </div>
             <p class="price">35€</p>
+            <div class="check-container">
+                <i class="check" class="fa-solid fa-check"></i>
+                </div>
         </div>
-        <div class="entry-three">
+        <div class="entry">
+            <div class="plate-and-side-dish">
             <h2 class="entry-plate-dessert-title">Soupe à l'oignon</h2>
             <p class="specification-seasoning-or-side-dish">Revisitée</p>
+            </div>
             <p class="price">20€</p>
             <div class="check-container">
             <i class="check" class="fa-solid fa-check"></i>
             </div>
         </div>
 
-        <section class="plate">
+        <section class="plate-section">
             <div class="following-plate">
-            <h2 class="title-section">Plats</h2>
+            <h2 class="title-section">PLATS</h2>
             <div class="bar"></div>
             </div>
-            <div class="plate-one">
+            <div class="plate">
+                <div class="plate-and-side-dish">
                 <h2 class="entry-plate-dessert-title">Coquilles Saint-Jacques</h2>
                 <p class="specification-seasoning-or-side-dish">Accompagnées d'une purée de panais</p>
+                </div>
                 <p class="price">40€</p>
             </div>
-            <div class="plate-two">
+            <div class="plate">
+                <div class="plate-and-side-dish">
                 <h2 class="entry-plate-dessert-title">Magret de canard</h2>
                 <p class="specification-seasoning-or-side-dish">Et parmentier de pommes de terre</p>
+                </div>
                 <p class="price">35€</p>
             </div>
-            <div class="plate-three">
+            <div class="plate">
+                <div class="plate-and-side-dish">
                 <h2 class="entry-plate-dessert-title">Pigeonneau d'Ille-et-Vilaine</h2>
                 <p class="specification-seasoning-or-side-dish">Sur son lit de gnocchis aux légumes</p>
+                </div>
                 <p class="price">44€</p>
             </div>
 
-            <section class="dessert">
+            <section class="dessert-section">
                 <div class="final-dessert">
-                <h2 class="title-section">Desserts</h2>
+                <h2 class="title-section">DESSERTS</h2>
                 <div class="bar"></div>
                 </div>
-                <div class="dessert-one">
+                <div class="dessert">
+                    <div class="plate-and-side-dish">
                     <h2 class="entry-plate-dessert-title">Pétale de violettes glacées</h2>
                     <p class="specification-seasoning-or-side-dish">Et purée de noisettes</p>
+                    </div>
                     <p class="price">18€</p>
                 </div>
-                <div class="dessert-two">
+                <div class="dessert">
+                    <div class="plate-and-side-dish">
                     <h2 class="entry-plate-dessert-title">Fondant au chocolat</h2>
                     <p class="specification-seasoning-or-side-dish">Revisité</p>
+                    </div>
                     <p class="price">22€</p>
                 </div>
-                <div class="dessert-three">
+                <div class="dessert">
+                    <div class="plate-and-side-dish">
                     <h2 class="entry-plate-dessert-title">Millefeuille croustillant</h2>
                     <p class="specification-seasoning-or-side-dish">Myrtilles et pâte d'amande</p>
+                    </div>
                     <p class="price">23€</p>
                 </div>
             </section>
             <nav class="command"><p>Commander</p></nav>
     </main>
     <footer>
-        <img class="footer-ohmyfood-logo" src="images/logo/ohmyfood.png">
-        <ul class="footer-ul">
-            <li class="propose-restaurant">
-                <i class="fa-solid fa-utensils"></i><p>Proposer un restaurant</p>
-            </li>
-            <li class="become-partnair"><i class="fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></li>
-        <li class="legal-mentions"><p>Mentions légales</p></li>
-        <li class="contact"><p>Contact</p></li>
-        </ul>
-    </footer>
+    <p class="footer-ohmyfood-logo">ohmyfood</p>
+    <ul class="footer-ul">
+        <li class="propose-restaurant">
+            <i id="ustensils" class="fa-solid fa-utensils"></i><p>Proposer un restaurant</p>
+        </li>
+        <li class="become-partnair"><i id="handshake" class="fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></li>
+    <li class="legal-mentions"><p>Mentions légales</p></li>
+    <li class="contact"><p>Contact</p></li>
+    </ul>
+</footer>
 </body>
 </html>

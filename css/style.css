@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*@mixin footer-rules {
+    color: white;
+    background-color: #454343;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+}*/
 body {
   width: 100%;
   margin: 0px;
@@ -7,21 +14,37 @@ body {
 }
 
 /*importation police texte*/
-p, ul {
+p, ul, .title-section, .entry-plate-dessert-title {
   font-family: "Roboto", sans-serif;
 }
 
 /*importation police logo et titres*/
-.logo, .footer-ohmyfood-logo, h1, h2, h3 {
+.logo, .footer-ohmyfood-logo, .page-ohmyfood-logo, h1, h2, h3 {
   font-family: "Shrikhand", cursive;
-}
-
-h1 {
-  font-size: 16px;
 }
 
 .footer-ohmyfood-logo {
   font-size: 20px;
+}
+
+.page-ohmyfood-logo {
+  font-size: 25px;
+}
+
+/*taille titre menu*/
+.title-menu {
+  font-size: 27px;
+}
+
+/*taille et couleur title-section*/
+.title-section {
+  font-size: 18px;
+  color: gray;
+}
+
+/*taille plats*/
+.entry-plate-dessert-title {
+  font-size: 18px;
 }
 
 .logo {
@@ -71,6 +94,31 @@ h1 {
 }
 
 /*header pages*/
+.header-pages {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.arrow-and-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.picture-page-container {
+  width: 100%;
+  height: 300px;
+}
+
+.page-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .title-working {
   margin-left: 30px;
 }
@@ -116,6 +164,16 @@ h1 {
 }
 #pictogram-1:hover, #pictogram-2:hover, #pictogram-3:hover {
   color: #9356DC;
+}
+
+/*barre de nav commander*/
+.command {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 30px;
+  margin: 60px 120px 0px 120px;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
 }
 
 footer {
@@ -218,6 +276,43 @@ p {
 
 .place {
   margin-top: 5px;
+}
+
+/*main*/
+.menu {
+  background-color: #F2F2F2;
+  border-radius: 30px 0px 0px 30px;
+  padding: 0px 0px 60px 0px;
+  z-index: 2;
+  top: 250px;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-menu, .title-section {
+  margin-left: 30px;
+}
+
+/*section menu*/
+.entry, .plate, .dessert {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px 7px 20px;
+  padding: 0px 10px 0px 10px;
+  height: 70px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+  box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+  justify-content: space-between;
+}
+
+/*supression de la marge pour que tout le texte rentre dans les cards*/
+.entry-plate-dessert-title {
+  margin: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

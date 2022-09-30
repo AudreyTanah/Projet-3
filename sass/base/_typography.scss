@@ -1,14 +1,27 @@
 /*importation police texte*/
-p, ul {
+p, ul, .title-section, .entry-plate-dessert-title {
 font-family: 'Roboto', sans-serif;
 }
 /*importation police logo et titres*/
-.logo, .footer-ohmyfood-logo, h1, h2, h3 {
+.logo, .footer-ohmyfood-logo, .page-ohmyfood-logo, h1, h2, h3 {
 font-family: 'Shrikhand', cursive;
-}
-h1 {
-    font-size: 16px;
 }
 .footer-ohmyfood-logo {
     font-size: 20px;
+}
+.page-ohmyfood-logo {
+    font-size: 25px;
+}
+/*taille titre menu*/
+.title-menu {
+    font-size: 27px;
+}
+/*taille et couleur title-section*/
+.title-section {
+    font-size: 18px;
+    color:gray;
+}
+/*taille plats*/
+.entry-plate-dessert-title {
+    font-size: 18px;
 }
