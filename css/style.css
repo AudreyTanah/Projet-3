@@ -12,12 +12,16 @@ p, ul {
 }
 
 /*importation police logo et titres*/
-.logo, h1, h2, h3 {
+.logo, .footer-ohmyfood-logo, h1, h2, h3 {
   font-family: "Shrikhand", cursive;
 }
 
 h1 {
   font-size: 16px;
+}
+
+.footer-ohmyfood-logo {
+  font-size: 20px;
 }
 
 .logo {
@@ -33,15 +37,16 @@ h1 {
 .city-research {
   display: flex;
   justify-content: center;
-  background-color: #F2F2F2;
+  background-color: #e8e2e2;
   padding: 20px;
 }
 
 .city {
-  background-color: #F2F2F2;
+  background-color: #e8e2e2;
 }
 
 .contain-1-header {
+  background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,11 +54,7 @@ h1 {
 }
 
 .reserve {
-  margin: 30px 30px 10px 30px;
-}
-
-.discover {
-  margin: 20px;
+  margin: 30px 30px 0px 30px;
 }
 
 .reserve, .discover, .explore {
@@ -62,16 +63,21 @@ h1 {
 
 .explore {
   margin: 30px 70px;
-  padding: 1px 30px;
+  padding: 15px;
   color: white;
-  background-color: #FF79DA;
+  background-color: #9356DC;
   border-radius: 30px;
   box-shadow: inset 2px #9356DC;
 }
 
+/*header pages*/
+.title-working {
+  margin-left: 30px;
+}
+
 /*retirer le point derriere les chiffres de la liste*/
 .nav-working {
-  margin: 0px;
+  margin: 20px 0px 50px 0px;
   padding: 0px;
   list-style-type: none;
   counter-reset: compteListe;
@@ -122,7 +128,6 @@ footer {
 
 .footer-ohmyfood-logo {
   color: white;
-  size: 3px;
   margin-left: 33px;
 }
 
@@ -165,7 +170,8 @@ main {
 .card-1, .card-2, .card-3, .card-4 {
   width: 100%;
   height: 250px;
-  border: 2px black solid;
+  -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+  box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
   border-radius: 20px;
   margin-bottom: 20px;
 }
@@ -185,6 +191,10 @@ main {
   justify-content: space-between;
   padding: 0px 10px 0px 10px;
   margin-top: 10px;
+}
+
+.heart {
+  font-size: 25px;
 }
 
 .picture-container {

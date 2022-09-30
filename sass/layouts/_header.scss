@@ -10,37 +10,39 @@
 .city-research {
     display: flex;
     justify-content: center;
-    background-color: #F2F2F2;
+    background-color: #e8e2e2;
     padding: 20px;
 }
 .city {
-    background-color: #F2F2F2;
-}
+    background-color: #e8e2e2;
+} 
 .contain-1-header {
+    background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 }
 .reserve {
-    margin: 30px 30px 10px 30px;
+    margin: 30px 30px 0px 30px;
 
 }
-.discover {
-    margin: 20px;
-}
+
 .reserve, .discover, .explore {
     text-align: center;
 }
 
 .explore {
     margin: 30px 70px;
-    padding: 1px 30px;
+    padding: 15px;
     color: white;
-    background-color:$secondary-color; 
+    background-color: $primary-color; 
     border-radius: 30px;
     box-shadow: inset 2px $primary-color;
     }
+
+/*header pages*/
+
 
 
 

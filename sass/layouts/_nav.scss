@@ -1,6 +1,10 @@
+.title-working {
+  margin-left: 30px;
+}
+
 /*retirer le point derriere les chiffres de la liste*/
 .nav-working{
-    margin: 0px;
+    margin: 20px 0px 50px 0px;
     padding: 0px;
     list-style-type: none;
     counter-reset: compteListe;
@@ -38,4 +42,5 @@
         color: $primary-color;
       }
 }
+
 
