@@ -27,6 +27,11 @@
         border-radius: 20px;
         margin-bottom: 20px;
     }
+    /*enlever la couleur bleue du lien par défaut + son soulignement et laisser la couleur d'origine du texte*/
+    .clickable {
+        text-decoration: none;
+        color: inherit;
+    }
     /*pour que le coeur ressorte sur la card-1 et card-2 car espace provoqué par le logo new mis en position relative*/
     .restaurant-name-and-place-with-logo-new {
         display: flex;

@@ -88,7 +88,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
   margin: 30px 70px;
   padding: 15px;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   box-shadow: inset 2px #9356DC;
 }
@@ -170,7 +170,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 
 /*barre de nav commander*/
 .command {
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   border-radius: 30px;
   text-align: center;
@@ -205,6 +205,11 @@ footer {
   margin-right: 10px;
 }
 
+.link-contact {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*section restaurant*/
 main {
   background-color: #F2F2F2;
@@ -235,6 +240,12 @@ main {
   box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+
+/*enlever la couleur bleue du lien par défaut + son soulignement et laisser la couleur d'origine du texte*/
+.clickable {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*pour que le coeur ressorte sur la card-1 et card-2 car espace provoqué par le logo new mis en position relative*/
