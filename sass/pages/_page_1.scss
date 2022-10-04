@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     margin: 0px 20px 7px 20px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 0px 0px 10px;
     height: 70px;
     border-radius: 20px;
     -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
@@ -31,5 +31,52 @@
 .entry-plate-dessert-title {
     margin: 0px;
 }
+.price {
+    margin: 37px 10px 0px 0px;
+}
+.price-and-check {
+    display: flex;
+    height: 100%;
+}
 
 
+
+.plate-clickable {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+
+    }
+}
+
+.check-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $tertiary-color;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 0px 3s;
+    transition-timing-function: linear;
+    float: right;
+    opacity: 0;
+    transition: background-position 150ms ease-out;
+    &:hover {
+        opacity:1;
+        width: 50px;
+    }
+}
+#check-1, #check-2, #check-3, #check-4, #check-5, #check-6, #check-7, #check-8, #check-9 {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 30px;
+    color: $tertiary-color;
+
+}

@@ -47,18 +47,28 @@
         padding: 0px 10px 0px 10px;
         margin-top: 10px;
     }
-       .heart {
+
+    .heart {
         font-size: 25px;
-        color: green;
-        border-radius: 30px;
-        transition: transform color .3s ease-in-out;
         
-        &:hover  {
-            color: blue;
-            
+    }
+    button {
+        size: 5px;
+        position: relative;
+        border: none;
+        border-radius: 60px;
+        transition: transform background-clip 3s ease-in;
+        background: linear-gradient($secondary-color, $primary-color);
+        opacity: 1;
+        
+        &:hover {
+            color: linear-gradient ($secondary-color, $primary-color);
+            opacity: 0;
         
          }
         }
+      
+        
         /*
          &::after {
          opacity: 1;   
