@@ -250,6 +250,7 @@ main {
   z-index: 99;
   right: 50px;
   margin-top: 10px;
+  padding: 3px;
 }
 
 /*Intégration des quatre cards restaurant*/
@@ -341,6 +342,37 @@ p {
 
 .place {
   margin-top: 5px;
+}
+
+/*version Desktop et tablette*/
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+  .nav-working {
+    display: flex;
+    justify-content: center;
+  }
+  .working-nav-bar {
+    width: 300px;
+  }
+  .card-1, .card-2, .card-3, .card-4 {
+    max-width: 600px;
+    height: 480px;
+    margin: 20px;
+  }
+  .logo-new {
+    right: 0px;
+    left: 300px;
+  }
+  .picture-container {
+    height: 400px;
+  }
+  .restaurant-name-and-place-with-logo-new, .restaurant-name-and-place {
+    margin-top: 20px;
+  }
+}
+/*alignement cards version desktop*/
+.desktop {
+  display: flex;
+  justify-content: center;
 }
 
 /*main*/
