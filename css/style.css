@@ -210,6 +210,26 @@ footer {
   color: inherit;
 }
 
+/*loading-spinner*/
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+.loading-spinner::before {
+  animation: 1.5s linear infinite spinner;
+  width: 300px;
+  height: 300px;
+  border: 3px black solid;
+  border-radius: 50%;
+  border-bottom-color: violet;
+  content: "";
+  position: absolute;
+}
+
 /*section restaurant*/
 main {
   background-color: #F2F2F2;
@@ -373,6 +393,7 @@ p {
   text-decoration: none;
   color: inherit;
 }
+
 .check-container {
   display: flex;
   align-items: center;
