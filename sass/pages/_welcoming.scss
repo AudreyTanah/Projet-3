@@ -1,3 +1,92 @@
+  /*version Desktop et tablette*/
+  @media screen and (min-width: 769px) and (max-width: 1600px) {
+    
+    .nav-working {
+        display: flex;
+        justify-content: center;
+    }
+    .working-nav-bar {
+        width: 300px;
+    }
+
+    .card-1, .card-2, .card-3, .card-4 {
+        max-width: 600px;
+        height: 480px;
+        margin: 20px;
+        -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+        box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+        border-radius: 20px;
+    }
+
+    .logo-new {
+        position: absolute;
+        color: green;
+        background-color: $tertiary-color;
+        text-align: center;
+        z-index: 99;
+        right: 50px;
+        margin-top: 10px;
+        padding: 3px;
+    }
+    .picture-container {
+        width: 100%;
+        height: 400px;
+    }
+    
+    /*alignement cards version desktop*/
+    .desktop {
+        display: flex;
+        justify-content: center;
+    }
+    }
+    .homepage-picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        position: relative;
+    }
+
+    .clickable {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .restaurant-name-and-place-with-logo-new {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+        margin-top: 10px;
+    }
+    .restaurant-name-and-place {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+        margin-top: 10px;
+    }
+    .heart {
+        font-size: 25px;
+    }
+    button {
+        size: 5px;
+        position: relative;
+        border: none;
+        border-radius: 60px;
+        transition: transform background-clip 3s ease-in;
+        background: linear-gradient($secondary-color, $primary-color);
+        opacity: 1;
+        
+        &:hover {
+            color: linear-gradient ($secondary-color, $primary-color);
+            opacity: 0;
+        
+         }
+        }
+      
+/*version mobile first*/
+@media screen and (max-width: 768px) {
 /*loading-spinner*/
 @keyframes spinner {
     0% {
@@ -48,12 +137,6 @@
         border-radius: 20px;
         margin-bottom: 20px;
     }
-    /*enlever la couleur bleue du lien par défaut + son soulignement et laisser la couleur d'origine du texte*/
-    .clickable {
-        text-decoration: none;
-        color: inherit;
-    }
-    /*pour que le coeur ressorte sur la card-1 et card-2 car espace provoqué par le logo new mis en position relative*/
     .restaurant-name-and-place-with-logo-new {
         display: flex;
         align-items: center;
@@ -125,36 +208,4 @@
         margin-top: 5px;
     }
 
-    /*version Desktop et tablette*/
-    @media screen and (min-width: 768px) and (max-width: 1600px) {
-    
-    .nav-working {
-        display: flex;
-        justify-content: center;
-    }
-    .working-nav-bar {
-        width: 300px;
-    }
-
-    .card-1, .card-2, .card-3, .card-4 {
-        max-width: 600px;
-        height: 480px;
-        margin: 20px;
-    }
-
-    .logo-new {
-        right: 0px;
-        left: 300px;
-    }
-    .picture-container {
-        height: 400px;
-    }
-    .restaurant-name-and-place-with-logo-new, .restaurant-name-and-place {
-        margin-top: 20px;
-    }
-    }
-    /*alignement cards version desktop*/
-    .desktop {
-        display: flex;
-        justify-content: center;
-    }
+}
