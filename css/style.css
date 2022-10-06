@@ -260,6 +260,9 @@ p, ul, .title-section, .entry-plate-dessert-title {
   .working-nav-bar {
     width: 300px;
   }
+  .title-restaurant {
+    margin-left: 30px;
+  }
   .card-1,
 .card-2,
 .card-3,
@@ -531,7 +534,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
   width: 50px;
 }
 
-#check-1, #check-2, #check-3, #check-4, #check-5, #check-6, #check-7, #check-8, #check-9 {
+.check {
   font-size: 20px;
   width: 20px;
   height: 20px;
