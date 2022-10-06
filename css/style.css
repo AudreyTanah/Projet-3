@@ -23,14 +23,6 @@ p, ul, .title-section, .entry-plate-dessert-title {
   font-family: "Shrikhand", cursive;
 }
 
-.footer-ohmyfood-logo {
-  font-size: 20px;
-}
-
-.page-ohmyfood-logo {
-  font-size: 25px;
-}
-
 /*taille titre menu*/
 .title-menu {
   font-size: 27px;
@@ -178,40 +170,89 @@ p, ul, .title-section, .entry-plate-dessert-title {
   margin: 60px 70px 0px 70px;
 }
 
-footer {
-  position: static;
-  color: white;
-  background-color: #454343;
-  width: 100%;
-  height: 100%;
-  padding: 20px 0px 20px 0px;
+@media screen and (min-width: 769px) and (max-width: 1600px) {
+  .footer-ohmyfood-logo {
+    font-size: 30px;
+  }
+  footer {
+    position: static;
+    color: white;
+    background-color: #454343;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+  }
+  .footer-ohmyfood-logo {
+    color: white;
+    margin-left: 30px;
+  }
+  .propose-restaurant, .become-partnair, .legal-mentions, .contact {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 7px 0px;
+  }
+  .propose, .partnair {
+    margin: 0px 0px 3px 0px;
+  }
+  .mentions, .contact {
+    margin: 3px 0px 0px 0px;
+  }
+  #ustensils {
+    margin-right: 16px;
+  }
+  #handshake {
+    margin-right: 10px;
+  }
+  .link-contact {
+    text-decoration: none;
+    color: inherit;
+  }
 }
-
-.footer-ohmyfood-logo {
-  color: white;
-  margin-left: 33px;
+@media screen and (max-width: 768px) {
+  .footer-ohmyfood-logo {
+    font-size: 20px;
+  }
+  .page-ohmyfood-logo {
+    font-size: 25px;
+  }
+  footer {
+    position: static;
+    color: white;
+    background-color: #454343;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+  }
+  .footer-ohmyfood-logo {
+    color: white;
+    margin-left: 33px;
+  }
+  .propose-restaurant, .become-partnair, .legal-mentions, .contact {
+    display: flex;
+    margin-bottom: 6px;
+  }
+  #ustensils {
+    margin-right: 16px;
+  }
+  #handshake {
+    margin-right: 10px;
+  }
+  .link-contact {
+    text-decoration: none;
+    color: inherit;
+  }
 }
-
-.propose-restaurant, .become-partnair, .legal-mentions, .contact {
-  display: flex;
-  margin-bottom: 6px;
-}
-
-#ustensils {
-  margin-right: 16px;
-}
-
-#handshake {
-  margin-right: 10px;
-}
-
-.link-contact {
-  text-decoration: none;
-  color: inherit;
-}
-
 /*version Desktop et tablette*/
 @media screen and (min-width: 769px) and (max-width: 1600px) {
+  p {
+    margin-top: 20px;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .place {
+    font-size: 16px;
+  }
   .nav-working {
     display: flex;
     justify-content: center;
@@ -219,13 +260,17 @@ footer {
   .working-nav-bar {
     width: 300px;
   }
-  .card-1, .card-2, .card-3, .card-4 {
+  .card-1,
+.card-2,
+.card-3,
+.card-4 {
     max-width: 600px;
     height: 480px;
     margin: 20px;
     -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
     box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
     border-radius: 20px;
+    position: relative;
   }
   .logo-new {
     position: absolute;
@@ -233,9 +278,9 @@ footer {
     background-color: #99E2D0;
     text-align: center;
     z-index: 99;
-    right: 50px;
-    margin-top: 10px;
-    padding: 3px;
+    right: 16px;
+    margin-top: 20px;
+    padding: 6px;
   }
   .picture-container {
     width: 100%;
@@ -243,57 +288,63 @@ footer {
   }
   /*alignement cards version desktop*/
   .desktop {
+    width: 100%;
     display: flex;
     justify-content: center;
   }
+  .homepage-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .clickable {
+    text-decoration: none;
+    color: inherit;
+  }
+  .restaurant-name-and-place-with-logo-new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 10px;
+    margin: 10px 10px 0px 0px;
+  }
+  .restaurant-name-and-place {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 10px;
+    margin: 10px 10px 0px 0px;
+  }
+  .heart {
+    position: relative;
+    width: 25px;
+    height: 25px;
+  }
+  .heart i:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: inherit;
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+  /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+  .place {
+    margin-top: 5px;
+  }
 }
-.homepage-picture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
-  position: relative;
-}
-
-.clickable {
-  text-decoration: none;
-  color: inherit;
-}
-
-.restaurant-name-and-place-with-logo-new {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 10px 0px 10px;
-  margin-top: 10px;
-}
-
-.restaurant-name-and-place {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 10px 0px 10px;
-  margin-top: 10px;
-}
-
-.heart {
-  font-size: 25px;
-}
-
-button {
-  size: 5px;
-  position: relative;
-  border: none;
-  border-radius: 60px;
-  transition: transform background-clip 3s ease-in;
-  background: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
-}
-button:hover {
-  color: linear-gradient #FF79DA, #9356DC;
-  opacity: 0;
-}
-
 /*version mobile first*/
 @media screen and (max-width: 768px) {
   /*loading-spinner*/
@@ -323,20 +374,30 @@ button:hover {
     margin: 20px;
     padding: 20px;
   }
+  .clickable {
+    text-decoration: none;
+    color: inherit;
+  }
   /*positionnement logo new card-1 et card-2*/
   .logo-new {
-    width: 100px;
     position: absolute;
     color: green;
     background-color: #99E2D0;
     text-align: center;
     z-index: 99;
     right: 50px;
-    margin-top: 10px;
-    padding: 3px;
+    margin: 10px;
+    padding: 0px 6px 0px 6px;
+  }
+  .new {
+    margin: 0px;
+    padding: 1px;
   }
   /*Intégration des quatre cards restaurant*/
-  .card-1, .card-2, .card-3, .card-4 {
+  .card-1,
+.card-2,
+.card-3,
+.card-4 {
     width: 100%;
     height: 250px;
     -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
@@ -345,6 +406,7 @@ button:hover {
     margin-bottom: 20px;
   }
   .restaurant-name-and-place-with-logo-new {
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -352,45 +414,20 @@ button:hover {
     margin-top: 10px;
   }
   .restaurant-name-and-place {
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 10px 0px 10px;
     margin-top: 10px;
   }
-  .heart {
-    font-size: 25px;
+  .name {
+    margin-bottom: 3px;
   }
-  button {
-    size: 5px;
-    position: relative;
-    border: none;
-    border-radius: 60px;
-    transition: transform background-clip 3s ease-in;
-    background: linear-gradient(#FF79DA, #9356DC);
-    opacity: 1;
+  p {
+    margin: 0px;
+    padding: 0px;
   }
-  button:hover {
-    color: linear-gradient #FF79DA, #9356DC;
-    opacity: 0;
-  }
-  /*
-   &::after {
-   opacity: 1;   
-   }
-   &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;  
-      left: 0;
-      color: linear-gradient($secondary-color,$primary-color);
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 250ms;
-  }
-  }*/
   .picture-container {
     width: 100%;
     height: 180px;
@@ -402,13 +439,25 @@ button:hover {
     border-radius: 20px 20px 0px 0px;
     position: relative;
   }
-  /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
-  p {
-    margin: 0px;
-    padding: 0px;
+  .heart {
+    position: relative;
+    width: 25px;
+    height: 25px;
   }
-  .place {
-    margin-top: 5px;
+  .heart i:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: inherit;
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
   }
 }
 /*main*/

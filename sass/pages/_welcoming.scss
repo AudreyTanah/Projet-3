@@ -1,211 +1,252 @@
   /*version Desktop et tablette*/
   @media screen and (min-width: 769px) and (max-width: 1600px) {
-    
-    .nav-working {
-        display: flex;
-        justify-content: center;
-    }
-    .working-nav-bar {
-        width: 300px;
-    }
+      p {
+          margin-top: 20px;
+      }
 
-    .card-1, .card-2, .card-3, .card-4 {
-        max-width: 600px;
-        height: 480px;
-        margin: 20px;
-        -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
-        box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
-        border-radius: 20px;
-    }
+      .name {
+          font-size: 20px;
+      }
 
-    .logo-new {
-        position: absolute;
-        color: green;
-        background-color: $tertiary-color;
-        text-align: center;
-        z-index: 99;
-        right: 50px;
-        margin-top: 10px;
-        padding: 3px;
-    }
-    .picture-container {
-        width: 100%;
-        height: 400px;
-    }
-    
-    /*alignement cards version desktop*/
-    .desktop {
-        display: flex;
-        justify-content: center;
-    }
-    }
-    .homepage-picture {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
+      .place {
+          font-size: 16px;
+      }
+
+      .nav-working {
+          display: flex;
+          justify-content: center;
+      }
+
+      .working-nav-bar {
+          width: 300px;
+      }
+
+      .card-1,
+      .card-2,
+      .card-3,
+      .card-4 {
+          max-width: 600px;
+          height: 480px;
+          margin: 20px;
+          -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+          box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+          border-radius: 20px;
+          position: relative;
+      }
+
+      .logo-new {
+          position: absolute;
+          color: green;
+          background-color: $tertiary-color;
+          text-align: center;
+          z-index: 99;
+          right: 16px;
+          margin-top: 20px;
+          padding: 6px;
+      }
+
+      .picture-container {
+          width: 100%;
+          height: 400px;
+      }
+
+      /*alignement cards version desktop*/
+      .desktop {
+            width: 100%;
+          display: flex;
+          justify-content: center;
+      }
+
+      .homepage-picture {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0px 0px;
+      }
+
+      .clickable {
+          text-decoration: none;
+          color: inherit;
+      }
+
+      .restaurant-name-and-place-with-logo-new {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 0px 0px 10px;
+          margin: 10px 10px 0px 0px;
+      }
+
+      .restaurant-name-and-place {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 0px 0px 10px;
+          margin: 10px 10px 0px 0px;
+      }
+
+      .heart {
         position: relative;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .heart i:hover {
+        background: linear-gradient($secondary-color, $primary-color);
+        color: white;
+        font-weight: 600;
+        transform: scale(1.2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: inherit;
+        position: absolute;
+        right: 3px;
+        top: 2px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1;
     }
 
-    .clickable {
+      /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
+      p {
+          margin: 0px;
+          padding: 0px;
+      }
+
+      .place {
+          margin-top: 5px;
+      }
+
+  }
+
+  /*version mobile first*/
+  @media screen and (max-width: 768px) {
+
+      /*loading-spinner*/
+      @keyframes spinner {
+          0% {
+              transform: translate3d(-50%, -50%, 0) rotate(0deg);
+          }
+
+          100% {
+              transform: translate3d(-50%, -50%, 0) rotate(360deg);
+          }
+      }
+
+      .loading-spinner::before {
+          animation: 1.5s linear infinite spinner;
+          width: 300px;
+          height: 300px;
+          border: 3px black solid;
+          border-radius: 50%;
+          border-bottom-color: violet;
+          content: "";
+          position: absolute;
+      }
+
+      /*section restaurant*/
+      main {
+          background-color: #F2F2F2;
+      }
+
+      .restaurant {
+          margin: 20px;
+          padding: 20px;
+      }
+
+      .clickable {
         text-decoration: none;
         color: inherit;
-    }
+      }
 
-    .restaurant-name-and-place-with-logo-new {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 10px 0px 10px;
-        margin-top: 10px;
-    }
-    .restaurant-name-and-place {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 10px 0px 10px;
-        margin-top: 10px;
-    }
-    .heart {
-        font-size: 25px;
-    }
-    button {
-        size: 5px;
-        position: relative;
-        border: none;
-        border-radius: 60px;
-        transition: transform background-clip 3s ease-in;
-        background: linear-gradient($secondary-color, $primary-color);
-        opacity: 1;
-        
-        &:hover {
-            color: linear-gradient ($secondary-color, $primary-color);
-            opacity: 0;
-        
-         }
-        }
-      
-/*version mobile first*/
-@media screen and (max-width: 768px) {
-/*loading-spinner*/
-@keyframes spinner {
-    0% {
-        transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-        transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-}
-.loading-spinner::before {
-    animation: 1.5s linear infinite spinner;
-    width: 300px;
-    height: 300px;
-    border: 3px black solid;
-    border-radius: 50%;
-    border-bottom-color: violet;
-    content:"";
-    position: absolute;
-}
-
-/*section restaurant*/
-    main {
-    background-color: #F2F2F2; 
-    }
-    .restaurant {
-       margin: 20px;
-       padding: 20px;
-    }
-    /*positionnement logo new card-1 et card-2*/
-    .logo-new {
-        width: 100px;
+      /*positionnement logo new card-1 et card-2*/
+      .logo-new {
         position: absolute;
         color: green;
         background-color: $tertiary-color;
         text-align: center;
         z-index: 99;
-        right: 50px;
-        margin-top: 10px;
-        padding: 3px;
-    
-    }
-    /*Intégration des quatre cards restaurant*/
-    .card-1, .card-2, .card-3, .card-4 {
-        width: 100%;
-        height: 250px;
-        -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
-        box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
-        border-radius: 20px;
-        margin-bottom: 20px;
-    }
-    .restaurant-name-and-place-with-logo-new {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 10px 0px 10px;
-        margin-top: 10px;
-    }
-    .restaurant-name-and-place {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 10px 0px 10px;
-        margin-top: 10px;
-    }
-    .heart {
-        font-size: 25px;
-    }
-    button {
-        size: 5px;
-        position: relative;
-        border: none;
-        border-radius: 60px;
-        transition: transform background-clip 3s ease-in;
-        background: linear-gradient($secondary-color, $primary-color);
-        opacity: 1;
-        
-        &:hover {
-            color: linear-gradient ($secondary-color, $primary-color);
-            opacity: 0;
-        
-         }
-        }
-      
-        
-        /*
-         &::after {
-         opacity: 1;   
-         }
-         &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;  
-            left: 0;
-            color: linear-gradient($secondary-color,$primary-color);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-        }
-        }*/
-    .picture-container {
-        width: 100%;
-        height: 180px;
-    }
-    .homepage-picture {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
-        position: relative;
-    }
-    /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
-    p {
-        margin: 0px;
-        padding: 0px;
-    }
-    .place {
-        margin-top: 5px;
-    }
+          right: 50px;
+          margin: 10px;
+          padding: 0px 6px 0px 6px;
 
+      }
+      .new {
+        margin: 0px;
+        padding: 1px;
+      }
+
+      /*Intégration des quatre cards restaurant*/
+      .card-1,
+      .card-2,
+      .card-3,
+      .card-4 {
+          width: 100%;
+          height: 250px;
+          -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+          box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+          border-radius: 20px;
+          margin-bottom: 20px;
+      }
+
+      .restaurant-name-and-place-with-logo-new {
+        height: 50px;  
+        display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 10px 0px 10px;
+          margin-top: 10px;
+      }
+
+      .restaurant-name-and-place {
+        height: 50px;  
+        display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 10px 0px 10px;
+          margin-top: 10px;
+      }
+      
+.name {
+    margin-bottom: 3px;
 }
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+
+      .picture-container {
+          width: 100%;
+          height: 180px;
+      }
+
+      .homepage-picture {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0px 0px;
+          position: relative;
+      }
+
+      .heart {
+          position: relative;
+          width: 25px;
+          height: 25px;
+      }
+
+      .heart i:hover {
+          background: linear-gradient($secondary-color, $primary-color);
+          color: white;
+          font-weight: 600;
+          transform: scale(1.2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          width: inherit;
+          position: absolute;
+          right: 3px;
+          top: 2px;
+          bottom: 0px;
+          left: 0px;
+          z-index: 1;
+      }
+  }
