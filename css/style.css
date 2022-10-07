@@ -141,7 +141,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 .working-nav-bar {
   display: flex;
   align-items: center;
-  margin: 0px 30px 20px 30px;
+  margin: 0px 20px 20px 20px;
   padding: 7px;
   background-color: #F2F2F2;
   border: 2px #F2F2F2 solid;
@@ -163,11 +163,15 @@ p, ul, .title-section, .entry-plate-dessert-title {
 /*barre de nav commander*/
 .command {
   background: linear-gradient(#FF79DA, #9356DC);
+  opacity: 1;
   color: white;
   border-radius: 30px;
   text-align: center;
   padding: 10px;
   margin: 60px 70px 0px 70px;
+}
+.command:hover {
+  opacity: 0.8;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1600px) {
@@ -323,8 +327,10 @@ p, ul, .title-section, .entry-plate-dessert-title {
     position: relative;
     width: 25px;
     height: 25px;
+    transform: scale(0.1);
+    transition-duration: 1000ms;
   }
-  .heart i:hover {
+  .heart:hover {
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     font-weight: 600;
@@ -355,12 +361,22 @@ p, ul, .title-section, .entry-plate-dessert-title {
     0% {
       transform: translate3d(-50%, -50%, 0) rotate(0deg);
     }
+    15% {
+      transform: translate3d(-50%, -50%, 0);
+    }
+    40% {
+      transform: translate3d(-50%, -50%, 0);
+    }
+    75% {
+      transform: translate3d(-50%, -50%, 0);
+    }
     100% {
       transform: translate3d(-50%, -50%, 0) rotate(360deg);
     }
   }
   .loading-spinner::before {
-    animation: 1.5s linear infinite spinner;
+    animation: 1s linear spinner backwards;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
     width: 300px;
     height: 300px;
     border: 3px black solid;
@@ -368,6 +384,9 @@ p, ul, .title-section, .entry-plate-dessert-title {
     border-bottom-color: violet;
     content: "";
     position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: scaleX(0);
   }
   /*section restaurant*/
   main {
@@ -463,6 +482,16 @@ p, ul, .title-section, .entry-plate-dessert-title {
     z-index: 1;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1600px) {
+  .desktop-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .entry, .plate, .dessert {
+    max-width: 800px;
+  }
+}
 /*main*/
 .menu {
   background-color: #F2F2F2;
@@ -496,7 +525,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 }
 
 /*supression de la marge pour que tout le texte rentre dans les cards*/
-.entry-plate-dessert-title {
+.entry-plate-dessert-title, .specification-seasoning-or-side-dish {
   margin: 0px;
 }
 

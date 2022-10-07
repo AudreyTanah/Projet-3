@@ -1,3 +1,14 @@
+@media screen and (min-width: 769px) and (max-width: 1600px) {
+ .desktop-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+ } 
+ .entry, .plate, .dessert {
+    max-width: 800px;
+    
+ } 
+}
 /*main*/
 .menu {
  background-color: #F2F2F2; 
@@ -28,7 +39,7 @@
     justify-content: space-between;
 }
 /*supression de la marge pour que tout le texte rentre dans les cards*/
-.entry-plate-dessert-title {
+.entry-plate-dessert-title, .specification-seasoning-or-side-dish {
     margin: 0px;
 }
 .price {
