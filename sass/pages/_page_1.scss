@@ -1,15 +1,27 @@
-@media screen and (min-width: 769px) and (max-width: 1600px) {
- .desktop-menu {
+@media screen and (min-width: 869px) and (max-width: 1600px) {
+ .price {
+    margin-right: 0px;
+    font-size: 13px;
+ }
+ .entry-plate-dessert-title {
+    font-size: 16px;
+ }
+ .specification-seasoning-or-side-dish {
+    font-size: 13px;
+ }
+    .desktop-menu {
     display: flex;
     width: 100%;
     justify-content: space-around;
  } 
- .entry, .plate, .dessert {
-    max-width: 800px;
-    
- } 
+
 }
+
 /*main*/
+
+main {
+    width: 100%;
+}
 .menu {
  background-color: #F2F2F2; 
  border-radius: 30px 30px 0px 0px;
@@ -43,7 +55,7 @@
     margin: 0px;
 }
 .price {
-    margin: 37px 10px 0px 0px;
+    margin: 37px 6px 0px 0px;
 }
 .price-and-check {
     display: flex;
@@ -77,6 +89,7 @@
         width: 50px;
     }
 }
+
 .check {
     font-size: 20px;
     width: 20px;
@@ -87,5 +100,6 @@
     background-color: white;
     border-radius: 30px;
     color: $tertiary-color;
-
+}
+@media screen and (max-width: 870px) {
 }

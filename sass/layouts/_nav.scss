@@ -44,20 +44,29 @@
 }
 
 /*barre de nav commander*/
+.command-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .command {
   background: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
   color: white;
   border-radius: 30px;
-  text-align: center;
-  padding: 10px;
-  margin: 60px 70px 0px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 3px 10px 3px;
+  margin: 80px auto 20px auto;
+  width: 70%;
+  max-width: 270px;
+  min-width: 200px;
 
-    &:hover {
-  opacity: 0.8;
+
+  
+  &:hover {
+  background: linear-gradient(lighten(#FF79DA, 5%), #9356DC);
   }
 
-
 }
-
 
