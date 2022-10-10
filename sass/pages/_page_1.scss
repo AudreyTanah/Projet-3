@@ -1,24 +1,4 @@
-@media screen and (min-width: 869px) and (max-width: 1600px) {
- .price {
-    margin-right: 0px;
-    font-size: 13px;
- }
- .entry-plate-dessert-title {
-    font-size: 16px;
- }
- .specification-seasoning-or-side-dish {
-    font-size: 13px;
- }
-    .desktop-menu {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
- } 
-
-}
-
 /*main*/
-
 main {
     width: 100%;
 }
@@ -37,6 +17,9 @@ main {
 }
 .title-section {
     margin-left: 30px;
+    width: 40px;
+    height: 25px;
+    border-bottom: 3px $tertiary-color solid;
 }
 /*section menu*/
 .entry, .plate, .dessert {
@@ -50,6 +33,7 @@ main {
     box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
     justify-content: space-between;
 }
+
 /*supression de la marge pour que tout le texte rentre dans les cards*/
 .entry-plate-dessert-title, .specification-seasoning-or-side-dish {
     margin: 0px;
@@ -84,12 +68,25 @@ main {
     float: right;
     opacity: 0;
     transition: background-position 150ms ease-out;
+    
     &:hover {
         opacity:1;
-        width: 50px;
+        width: 50px; 
+        i {
+            animation: spin-check 2s ease-in-out ;
+        }
     }
 }
 
+@keyframes spin-check {
+    from {
+        transform: rotate(-270deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+    
 .check {
     font-size: 20px;
     width: 20px;
@@ -101,5 +98,23 @@ main {
     border-radius: 30px;
     color: $tertiary-color;
 }
-@media screen and (max-width: 870px) {
-}
+
+
+@media screen and (min-width: 869px) and (max-width: 1600px) {
+    .price {
+       margin-right: 0px;
+       font-size: 13px;
+    }
+    .entry-plate-dessert-title {
+       font-size: 16px;
+    }
+    .specification-seasoning-or-side-dish {
+       font-size: 13px;
+    }
+       .desktop-menu {
+       display: flex;
+       width: 100%;
+       justify-content: space-around;
+    } 
+   
+   }

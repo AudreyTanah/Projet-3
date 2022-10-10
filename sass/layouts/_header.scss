@@ -70,6 +70,15 @@
     color: white;
     background: linear-gradient(#FF79DA, #9356DC);
     border-radius: 30px;
-    box-shadow: inset 2px $primary-color;
+    box-shadow: $shadow;
+    
+    
+    &:hover {
+        background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
+        box-shadow: darken(#888b8e, 75%);    
+        
     }
+
+
+}
 
