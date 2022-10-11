@@ -29,8 +29,7 @@ main {
     padding: 0px 0px 0px 10px;
     height: 70px;
     border-radius: 20px;
-    -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
-    box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+    box-shadow: $shadow;
     justify-content: space-between;
 }
 
@@ -46,14 +45,21 @@ main {
     height: 100%;
 }
 
-
-
 .plate-clickable {
     text-decoration: none;
     color: inherit;
- 
 }
 
+.entry, .plate, .dessert {
+    overflow: hidden;
+    transition: margin-right 0.5s linear;
+    &:hover .check-container {
+        margin-right: 0px;
+    }
+    &:hover i {
+    animation: spin-check 1s ease-in-out ;
+}
+}
 .check-container {
     display: flex;
     align-items: center;
@@ -61,21 +67,9 @@ main {
     background-color: $tertiary-color;
     border-radius: 0px 20px 20px 0px;
     padding: 0px;
-    margin: 0px;
+    margin-right: -50px;
+    width: 50px;
     height: 100%;
-    width: 0px 3s;
-    transition-timing-function: linear;
-    float: right;
-    opacity: 0;
-    transition: background-position 150ms ease-out;
-    
-    &:hover {
-        opacity:1;
-        width: 50px; 
-        i {
-            animation: spin-check 2s ease-in-out ;
-        }
-    }
 }
 
 @keyframes spin-check {
@@ -101,20 +95,34 @@ main {
 
 
 @media screen and (min-width: 869px) and (max-width: 1600px) {
+    .heart-page {
+        font-size: 21px;
+    }
     .price {
-       margin-right: 0px;
+       margin-right: 10px;
        font-size: 13px;
     }
     .entry-plate-dessert-title {
-       font-size: 16px;
+        font-size: 16px;
     }
     .specification-seasoning-or-side-dish {
        font-size: 13px;
     }
+    .menu {
+        width: 100%;
+    }
        .desktop-menu {
        display: flex;
        width: 100%;
-       justify-content: space-around;
     } 
-   
+
+    .entry-section, .plate-section, .dessert-section {
+        margin: 10px;
+        width: 100%;
+        min-width: 200px;
+    }
+    .entry, .plate, .dessert {
+    min-width: 200px;
    }
+   
+}

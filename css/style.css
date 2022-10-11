@@ -1,11 +1,6 @@
 @charset "UTF-8";
-/*@mixin footer-rules {
-    color: white;
-    background-color: #454343;
-    width: 100%;
-    height: 100%;
-    padding: 20px 0px 20px 0px;
-}*/
+/*mixin loader*/
+/*mixin heart*/
 body {
   width: 100%;
   height: 100%;
@@ -190,12 +185,14 @@ p, ul, .title-section, .entry-plate-dessert-title {
   align-items: center;
   padding: 10px 3px 10px 3px;
   margin: 80px auto 20px auto;
+  box-shadow: 2px 5px 16px 0px #888b8e;
   width: 70%;
   max-width: 270px;
   min-width: 200px;
 }
 .command:hover {
   background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: black;
 }
 
 @media screen and (min-width: 869px) and (max-width: 1600px) {
@@ -386,14 +383,20 @@ p, ul, .title-section, .entry-plate-dessert-title {
     padding: 0px 0px 0px 10px;
     margin: 10px 10px 0px 0px;
   }
-  .heart {
+  /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+  .place {
+    margin-top: 5px;
+  }
+  body .heart {
     position: relative;
     width: 25px;
     height: 25px;
-    transform: scale(0.1);
-    transition-duration: 1000ms;
   }
-  .heart:hover {
+  body .heart i:hover {
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     font-weight: 600;
@@ -408,17 +411,45 @@ p, ul, .title-section, .entry-plate-dessert-title {
     left: 0px;
     z-index: 1;
   }
-  /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
-  p {
-    margin: 0px;
-    padding: 0px;
-  }
-  .place {
-    margin-top: 5px;
-  }
 }
 /*version mobile first*/
 @media screen and (max-width: 870px) {
+  body .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0, 3;
+    animation: disappear 1s 2s linear forwards;
+  }
+  @keyframes disappear {
+    to {
+      transform: scale(0) rotate(360deg);
+    }
+  }
+  body .loader::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 15px solid #ddd;
+    border-top-color: #99E2D0;
+    border-radius: 50%;
+    animation: loading 1s infinite linear;
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   /*section restaurant*/
   main {
     background-color: #F2F2F2;
@@ -546,8 +577,7 @@ main {
   padding: 0px 0px 0px 10px;
   height: 70px;
   border-radius: 20px;
-  -webkit-box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
-  box-shadow: 2px 5px 16px 0px #c3c7ca, inset -48px -37px 48px -30px #F2F2F2;
+  box-shadow: 2px 5px 16px 0px #888b8e;
   justify-content: space-between;
 }
 
@@ -570,6 +600,17 @@ main {
   color: inherit;
 }
 
+.entry, .plate, .dessert {
+  overflow: hidden;
+  transition: margin-right 0.5s linear;
+}
+.entry:hover .check-container, .plate:hover .check-container, .dessert:hover .check-container {
+  margin-right: 0px;
+}
+.entry:hover i, .plate:hover i, .dessert:hover i {
+  animation: spin-check 1s ease-in-out;
+}
+
 .check-container {
   display: flex;
   align-items: center;
@@ -577,20 +618,9 @@ main {
   background-color: #99E2D0;
   border-radius: 0px 20px 20px 0px;
   padding: 0px;
-  margin: 0px;
-  height: 100%;
-  width: 0px 3s;
-  transition-timing-function: linear;
-  float: right;
-  opacity: 0;
-  transition: background-position 150ms ease-out;
-}
-.check-container:hover {
-  opacity: 1;
+  margin-right: -50px;
   width: 50px;
-}
-.check-container:hover i {
-  animation: spin-check 2s ease-in-out;
+  height: 100%;
 }
 
 @keyframes spin-check {
@@ -614,8 +644,11 @@ main {
 }
 
 @media screen and (min-width: 869px) and (max-width: 1600px) {
+  .heart-page {
+    font-size: 21px;
+  }
   .price {
-    margin-right: 0px;
+    margin-right: 10px;
     font-size: 13px;
   }
   .entry-plate-dessert-title {
@@ -624,15 +657,26 @@ main {
   .specification-seasoning-or-side-dish {
     font-size: 13px;
   }
+  .menu {
+    width: 100%;
+  }
   .desktop-menu {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+  }
+  .entry-section, .plate-section, .dessert-section {
+    margin: 10px;
+    width: 100%;
+    min-width: 200px;
+  }
+  .entry, .plate, .dessert {
+    min-width: 200px;
   }
 }
 /*... maquette*/
 #espuma {
-  width: 200px;
+  width: 100%;
+  min-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -640,14 +684,15 @@ main {
 
 /*... maquette*/
 #truffe {
-  width: 240px;
+  width: 100%;
+  min-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-#légumes {
-  width: 290px;
+#legumes {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -58,12 +58,14 @@
   align-items: center;
   padding: 10px 3px 10px 3px;
   margin: 80px auto 20px auto;
+  box-shadow: $shadow;
   width: 70%;
   max-width: 270px;
   min-width: 200px;
 
-  &:hover {
-  background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
+    &:hover {
+      background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
+      box-shadow: darken(#888b8e, 75%);
   }
 
 }

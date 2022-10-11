@@ -130,28 +130,6 @@
           margin: 10px 10px 0px 0px;
       }
 
-      .heart {
-        position: relative;
-        width: 25px;
-        height: 25px;
-        transform: scale(0.1);
-        transition-duration: 1000ms;
-        &:hover {
-        background: linear-gradient($secondary-color, $primary-color);
-        color: white;
-        font-weight: 600;
-        transform: scale(1.2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        width: inherit;
-        position: absolute;
-        right: 3px;
-        top: 2px;
-        bottom: 0px;
-        left: 0px;
-        z-index: 1;
-    }
-      }
       /*retirer les margin et padding par défaut afin que name and place soient plus proches*/
       p {
           margin: 0px;
@@ -162,11 +140,15 @@
           margin-top: 5px;
       }
 
-  }
-
+    body {
+        @include heart
+    }
+    }
   /*version mobile first*/
   @media screen and (max-width: 870px) {
-
+body {
+    @include loader
+}
  
       /*section restaurant*/
       main {

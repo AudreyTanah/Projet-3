@@ -1,13 +1,14 @@
 /*... maquette*/
 #truffe {
-    width: 240px;
+    width: 100%;
+    min-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-#légumes {
-    width: 290px;
+#legumes {
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;  
