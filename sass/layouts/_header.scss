@@ -64,21 +64,5 @@
     text-align: center;
 }
 
-.explore {
-    margin: 30px 70px;
-    padding: 15px;
-    color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    border-radius: 30px;
-    box-shadow: $shadow;
-    
-    
-    &:hover {
-        background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
-        box-shadow: darken(#888b8e, 75%);    
-        
-    }
 
-
-}
 

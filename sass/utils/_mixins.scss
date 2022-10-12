@@ -62,4 +62,61 @@
     z-index: 1;
 }
 }
+/*mixin ellipsis*/
+@mixin ellipsis {
+.plate-and-side-dish {
+    max-width: 100%;
+    overflow: hidden;
+}
+.entry-plate-dessert-title, 
+.specification-seasoning-or-side-dish {
+white-space: nowrap;
+overflow: hidden; 
+text-overflow: ellipsis;
+}
+}
 
+/*mixin check*/
+@mixin check {
+.entry, .plate, .dessert {
+    overflow: hidden;
+    transition: margin-right 0.5s linear;
+    &:hover .check-container {
+        margin-right: 0px;
+    }
+    &:hover i {
+    animation: spin-check 1s ease-in-out ;
+}
+}
+.check-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $tertiary-color;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px;
+    margin-right: -50px;
+    width: 50px;
+    height: 100%;
+}
+
+@keyframes spin-check {
+    from {
+        transform: rotate(-270deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.check {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 30px;
+    color: $tertiary-color;
+}
+}
