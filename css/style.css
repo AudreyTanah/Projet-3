@@ -1,8 +1,43 @@
 @charset "UTF-8";
 /*mixin loader*/
+.loader::after {
+  width: 100px;
+  height: 100px;
+  content: "";
+  border: 15px solid #ddd;
+  border-top-color: #99E2D0;
+  border-radius: 50%;
+  animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1160deg);
+  }
+}
+/*disparition de la page pendant l'attente du loading*/
+.page-disparition-for-animation-loader {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  animation: disparition 3s ease-in;
+}
+
+@keyframes disparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*mixin heart*/
 /*mixin ellipsis*/
 /*mixin check*/
+/*mixin animation plats*/
 body {
   width: 100%;
   height: 100%;
@@ -40,9 +75,11 @@ p, ul, .title-section, .entry-plate-dessert-title {
 /*boutton explorer*/
 .explore {
   margin: 30px 70px;
+  cursor: pointer;
   padding: 15px;
   border: none;
   color: white;
+  font-weight: 600;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   box-shadow: 2px 5px 16px 0px #888b8e;
@@ -55,9 +92,11 @@ p, ul, .title-section, .entry-plate-dessert-title {
 /*boutton commander*/
 .command {
   background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
   color: white;
   border: none;
   border-radius: 30px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,6 +214,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 .working-nav-bar {
   display: flex;
   align-items: center;
+  cursor: pointer;
   margin: 0px 20px 20px 20px;
   padding: 7px;
   background-color: #F2F2F2;
@@ -268,8 +308,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 }
 /*version Desktop et tablette*/
 @media screen and (min-width: 869px) and (max-width: 1600px) {
-  /*loading-spinner*/
-  .loader {
+  body .loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -280,29 +319,15 @@ p, ul, .title-section, .entry-plate-dessert-title {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
-    opacity: 0, 3;
-    animation: disappear 1s 2s linear forwards;
+    opacity: 1;
+    animation: disappear 2s 1s linear forwards;
   }
   @keyframes disappear {
-    to {
-      transform: scale(0) rotate(360deg);
-    }
-  }
-  .loader::after {
-    content: "";
-    width: 100px;
-    height: 100px;
-    border: 15px solid #ddd;
-    border-top-color: #99E2D0;
-    border-radius: 50%;
-    animation: loading 1s infinite linear;
-  }
-  @keyframes loading {
     from {
-      transform: rotate(0deg);
+      transform: scaleX(1) rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+      transform: scaleX(0) rotate(360deg);
     }
   }
   p {
@@ -424,29 +449,15 @@ p, ul, .title-section, .entry-plate-dessert-title {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
-    opacity: 0, 3;
-    animation: disappear 1s 2s linear forwards;
+    opacity: 1;
+    animation: disappear 2s 1s linear forwards;
   }
   @keyframes disappear {
-    to {
-      transform: scale(0) rotate(360deg);
-    }
-  }
-  body .loader::after {
-    content: "";
-    width: 100px;
-    height: 100px;
-    border: 15px solid #ddd;
-    border-top-color: #99E2D0;
-    border-radius: 50%;
-    animation: loading 1s infinite linear;
-  }
-  @keyframes loading {
     from {
-      transform: rotate(0deg);
+      transform: scaleX(1) rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+      transform: scaleX(0) rotate(360deg);
     }
   }
   /*section restaurant*/
@@ -525,12 +536,14 @@ p, ul, .title-section, .entry-plate-dessert-title {
     position: relative;
     width: 25px;
     height: 25px;
+    transform: scale(0);
+    transition: all transform 4000ms;
   }
-  .heart i:hover {
+  .heart:hover i {
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
     font-weight: 600;
-    transform: scale(1.2);
+    transform: scale(1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: inherit;
@@ -562,7 +575,7 @@ body .entry:hover .check-container, body .plate:hover .check-container, body .de
   margin-right: 0px;
 }
 body .entry:hover i, body .plate:hover i, body .dessert:hover i {
-  animation: spin-check 1s ease-in-out;
+  animation: spin-check 0.5s ease-in;
 }
 body .check-container {
   display: flex;
@@ -595,6 +608,54 @@ body .check {
   color: #99E2D0;
 }
 
+body .plate {
+  opacity: 0;
+  /*animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);*/
+  animation-fill-mode: both;
+  animation: apparition 3s forwards;
+  transform: scale(0);
+}
+body .plate.delay-1 {
+  animation-delay: 0.2s;
+}
+body .plate.delay-2 {
+  animation-delay: 0.4s;
+}
+body .plate.delay-3 {
+  animation-delay: 0.6s;
+}
+body .plate.delay-4 {
+  animation-delay: 0.8s;
+}
+body .plate.delay-5 {
+  animation-delay: 0.9s;
+}
+body .plate.delay-6 {
+  animation-delay: 1s;
+}
+body .plate.delay-7 {
+  animation-delay: 1.2s;
+}
+body .plate.delay-8 {
+  animation-delay: 1.4s;
+}
+body .plate.delay-9 {
+  animation-delay: 1.6s;
+}
+body .plate.delay-10 {
+  animation-delay: 1.8s;
+}
+@keyframes apparition {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /*main*/
 main {
   width: 100%;
@@ -622,7 +683,7 @@ main {
 }
 
 /*section menu*/
-.entry, .plate, .dessert {
+.plate {
   display: flex;
   align-items: center;
   margin: 0px 20px 7px 20px;
@@ -679,7 +740,7 @@ main {
     width: 100%;
     min-width: 200px;
   }
-  .entry, .plate, .dessert {
+  .plate {
     min-width: 200px;
   }
 }

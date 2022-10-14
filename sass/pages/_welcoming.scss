@@ -1,46 +1,10 @@
   /*version Desktop et tablette*/
   @media screen and (min-width: 869px) and (max-width: 1600px) {
     
-    /*loading-spinner*/
-    .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 0,3;
-            animation: disappear 1s 2s linear forwards;
-          }
-    
-          @keyframes disappear {
-            to {transform: scale(0) rotate(360deg); }
-            }
-       
-          .loader::after {
-          content: "";
-          width: 100px;
-          height: 100px;
-          border: 15px solid #ddd;
-          border-top-color: $tertiary-color;
-          border-radius: 50%;
-        animation: loading 1s infinite linear; 
-        }
-     
-        @keyframes loading {
-            from {
-                transform: rotate(0deg);
-                }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    
-      
+body {
+    @include loader 
+}
+
     p {
           margin-top: 20px;
       }
@@ -237,13 +201,14 @@ body {
           position: relative;
           width: 25px;
           height: 25px;
-      }
-
-      .heart i:hover {
+          transform: scale(0);
+          transition: all transform 4000ms;
+        
+          &:hover i {
           background: linear-gradient($secondary-color, $primary-color);
           color: white;
           font-weight: 600;
-          transform: scale(1.2);
+          transform: scale(1);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           width: inherit;
@@ -254,4 +219,5 @@ body {
           left: 0px;
           z-index: 1;
       }
-  }
+    }
+}

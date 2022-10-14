@@ -11,33 +11,55 @@
         align-items: center;
         justify-content: center;
         background: rgba(0, 0, 0, 0.5);
-        opacity: 0,3;
-        animation: disappear 1s 2s linear forwards;
+        opacity: 1;
+        animation: disappear 2s 1s linear forwards;
       }
 
       @keyframes disappear {
-        to {transform: scale(0) rotate(360deg); }
+            from {
+                transform: scaleX(1) rotate(0deg);
+            }
+ 
+            to {
+                transform: scaleX(0) rotate(360deg);
+            }
         }
-   
+}
       .loader::after {
-      content: "";
       width: 100px;
       height: 100px;
+      content: "";
       border: 15px solid #ddd;
       border-top-color: $tertiary-color;
       border-radius: 50%;
-    animation: loading 1s infinite linear; 
+        animation: loading 2s linear forwards;
     }
  
     @keyframes loading {
-        from {
+        0% {
             transform: rotate(0deg);
             }
-        to {
-            transform: rotate(360deg);
+            
+        100%{
+            transform: rotate(1160deg);
+        
         }
     }
-}
+    /*disparition de la page pendant l'attente du loading*/
+        .page-disparition-for-animation-loader{
+            opacity:1;
+            width: 100%;
+            height: 100%;
+            animation: disparition 3s ease-in;
+        } 
+        @keyframes disparition {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }    
 /*mixin heart*/
 @mixin heart {
 .heart {
@@ -85,7 +107,7 @@ text-overflow: ellipsis;
         margin-right: 0px;
     }
     &:hover i {
-    animation: spin-check 1s ease-in-out ;
+    animation: spin-check 0.5s ease-in;
 }
 }
 .check-container {
@@ -119,4 +141,56 @@ text-overflow: ellipsis;
     border-radius: 30px;
     color: $tertiary-color;
 }
+}
+
+/*mixin animation plats*/
+@mixin plate-animation {
+    .plate {
+        opacity:0;
+        /*animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);*/
+        animation-fill-mode: both;
+        animation: apparition 3s forwards;
+        transform: scale(0); 
+        &.delay-1 {
+            animation-delay: 0.20s;
+        }
+        &.delay-2 {
+            animation-delay: 0.40s;
+        }
+        &.delay-3 {
+            animation-delay: 0.60s;
+        }
+        &.delay-4 {
+            animation-delay: 0.80s;
+        }
+        &.delay-5 {
+            animation-delay: 0.90s;
+        }
+        &.delay-6{
+            animation-delay: 1s;
+        }
+        &.delay-7 {
+            animation-delay: 1.20s;
+        }
+        &.delay-8 {
+            animation-delay: 1.40s;
+        }
+        &.delay-9 {
+            animation-delay: 1.60s;
+        }
+        &.delay-10 {
+            animation-delay: 1.80s;
+        }
+    }
+    
+    @keyframes apparition {
+        from {
+     transform: translateY(50%);
+     opacity: 0;
+    }
+    to {
+     transform: translateY(0);
+     opacity: 1;
+    }
+    }
 }

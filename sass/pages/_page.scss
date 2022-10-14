@@ -5,6 +5,9 @@ body {
 body {
     @include check
 }
+body {
+    @include plate-animation
+}
 /*main*/
 main {
     width: 100%;
@@ -29,7 +32,7 @@ main {
     border-bottom: 3px $tertiary-color solid;
 }
 /*section menu*/
-.entry, .plate, .dessert {
+.plate {
     display: flex;
     align-items: center;
     margin: 0px 20px 7px 20px;
@@ -87,8 +90,8 @@ main {
         width: 100%;
         min-width: 200px;
     }
-    .entry, .plate, .dessert {
+    .plate{
     min-width: 200px;
    }
-   
+
 }
