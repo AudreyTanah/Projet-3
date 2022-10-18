@@ -3,46 +3,49 @@
 }
 
 /*retirer le point derriere les chiffres de la liste*/
-.nav-working{
-    margin: 20px 0px 50px 0px;
-    padding: 0px;
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-  
+.nav-working {
+  margin: 20px 0px 50px 0px;
+  padding: 0px;
+  list-style-type: none;
+  counter-reset: compteListe;
+}
+
 .working-nav-bar::before {
-    counter-increment: compteListe 1;
-    content: counter(compteListe) "";
-    width: 18px;
-    padding: 3px;
-    border-radius: 30px;
-    text-align: center;
-    background-color: $primary-color;
-    color: white;
-    position: relative;
-    right: 20px;
-  }
+  counter-increment: compteListe 1;
+  content: counter(compteListe) "";
+  width: 18px;
+  padding: 3px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: $primary-color;
+  color: white;
+  position: relative;
+  right: 20px;
+}
+
 .working-nav-bar {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin: 0px 20px 20px 20px;
-    padding: 7px;
-    background-color: #F2F2F2;
-    border: 2px #F2F2F2 solid;
-    box-shadow: $shadow;
-    border-radius: 20px;
-    &:hover {
-      opacity: 0.8;
-    }
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px 20px 20px 20px;
+  padding: 7px;
+  background-color: #F2F2F2;
+  border: 2px #F2F2F2 solid;
+  box-shadow: $shadow;
+  border-radius: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
-#pictogram-1, #pictogram-2, #pictogram-3 {
+
+#pictogram-1,
+#pictogram-2,
+#pictogram-3 {
   margin-right: 10px;
-    color: gray;
-      &:hover {
-        color: $primary-color;
-      }
+  color: gray;
+
+  &:hover {
+    color: $primary-color;
+  }
 }
-
-
-

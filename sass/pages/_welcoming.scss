@@ -1,14 +1,15 @@
   /*version Desktop et tablette*/
   @media screen and (min-width: 869px) and (max-width: 1600px) {
-    
-body {
-    @include loader 
-}
-.heart {   
-    @include heart
-}
 
-    p {
+      body {
+          @include loader
+      }
+
+      .heart {
+          @include heart
+      }
+
+      p {
           margin-top: 20px;
       }
 
@@ -28,9 +29,11 @@ body {
       .working-nav-bar {
           width: 300px;
       }
+
       .title-restaurant {
-        margin-left: 30px;
+          margin-left: 30px;
       }
+
       .card-1,
       .card-2,
       .card-3,
@@ -64,7 +67,7 @@ body {
 
       /*alignement cards version desktop*/
       .desktop {
-            width: 100%;
+          width: 100%;
           display: flex;
           justify-content: center;
       }
@@ -107,16 +110,18 @@ body {
           margin-top: 5px;
       }
 
- }
+  }
+
   /*version mobile first*/
   @media screen and (max-width: 870px) {
-body {
-    @include loader
-}
-.heart {
-    @include heart
-}
- 
+      body {
+          @include loader
+      }
+
+      .heart {
+          @include heart
+      }
+
       /*section restaurant*/
       main {
           background-color: #F2F2F2;
@@ -128,25 +133,26 @@ body {
       }
 
       .clickable {
-        text-decoration: none;
-        color: inherit;
+          text-decoration: none;
+          color: inherit;
       }
 
       /*positionnement logo new card-1 et card-2*/
       .logo-new {
-        position: absolute;
-        color: green;
-        background-color: $tertiary-color;
-        text-align: center;
-        z-index: 99;
+          position: absolute;
+          color: green;
+          background-color: $tertiary-color;
+          text-align: center;
+          z-index: 99;
           right: 50px;
           margin: 10px;
           padding: 0px 6px 0px 6px;
 
       }
+
       .new {
-        margin: 0px;
-        padding: 1px;
+          margin: 0px;
+          padding: 1px;
       }
 
       /*Intégration des quatre cards restaurant*/
@@ -154,17 +160,17 @@ body {
       .card-2,
       .card-3,
       .card-4 {
-        position: relative;
+          position: relative;
           width: 100%;
           height: 250px;
-        box-shadow: $shadow;
+          box-shadow: $shadow;
           border-radius: 20px;
           margin-bottom: 20px;
       }
 
       .restaurant-name-and-place-with-logo-new {
-        height: 50px;  
-        display: flex;
+          height: 50px;
+          display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 0px 10px 0px 10px;
@@ -172,21 +178,22 @@ body {
       }
 
       .restaurant-name-and-place {
-        height: 50px;  
-        display: flex;
+          height: 50px;
+          display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 0px 10px 0px 10px;
           margin-top: 10px;
       }
 
-.name {
-    margin-bottom: 3px;
-}
-  p {
-    margin: 0px;
-    padding: 0px;
-  }
+      .name {
+          margin-bottom: 3px;
+      }
+
+      p {
+          margin: 0px;
+          padding: 0px;
+      }
 
       .picture-container {
           width: 100%;
@@ -201,4 +208,4 @@ body {
           position: relative;
       }
 
-}
+  }

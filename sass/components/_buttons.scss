@@ -1,4 +1,4 @@
-/*boutton explorer*/
+/*bouton explorer*/
 .explore {
     margin: 30px 70px;
     cursor: pointer;
@@ -10,12 +10,12 @@
     border-radius: 30px;
     box-shadow: $shadow;
     transition: transform all 2.5s;
-    
-    
+
+
     &:hover {
         background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
-        box-shadow: darken(#2e2e2f, 100%);    
-        
+        box-shadow: 2px 5px 16px 0px #545657;
+
     }
 }
 
@@ -36,9 +36,9 @@
     width: 70%;
     max-width: 270px;
     min-width: 200px;
-  
-      &:hover {
+
+    &:hover {
         background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));
-        box-shadow: darken(#888b8e, 75%);
+        box-shadow: 2px 5px 16px 0px #545657;
     }
 }

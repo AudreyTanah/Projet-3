@@ -4,10 +4,10 @@
   width: 100px;
   height: 100px;
   content: "";
-  border: 15px solid #ddd;
+  border: 9px solid #ddd;
   border-top-color: #99E2D0;
   border-radius: 50%;
-  animation: loading 2s linear forwards;
+  animation: loading 2s ease-in-out forwards;
 }
 
 @keyframes loading {
@@ -47,12 +47,20 @@ body {
 }
 
 /*importation police texte*/
-p, ul, .title-section, .entry-plate-dessert-title {
+p,
+ul,
+.title-section,
+.entry-plate-dessert-title {
   font-family: "Roboto", sans-serif;
 }
 
 /*importation police logo et titres*/
-.logo, .footer-ohmyfood-logo, .page-ohmyfood-logo, h1, h2, h3 {
+.logo,
+.footer-ohmyfood-logo,
+.page-ohmyfood-logo,
+h1,
+h2,
+h3 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -72,7 +80,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
   font-size: 18px;
 }
 
-/*boutton explorer*/
+/*bouton explorer*/
 .explore {
   margin: 30px 70px;
   cursor: pointer;
@@ -87,7 +95,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 }
 .explore:hover {
   background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: black;
+  box-shadow: 2px 5px 16px 0px #545657;
 }
 
 /*boutton commander*/
@@ -110,7 +118,7 @@ p, ul, .title-section, .entry-plate-dessert-title {
 }
 .command:hover {
   background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: black;
+  box-shadow: 2px 5px 16px 0px #545657;
 }
 
 /*header pages restaurant (pas besoin de media querries car nommage html propre aux pages restaurant*/
@@ -184,7 +192,9 @@ p, ul, .title-section, .entry-plate-dessert-title {
   margin: 30px 30px 0px 30px;
 }
 
-.reserve, .discover, .explore {
+.reserve,
+.discover,
+.explore {
   text-align: center;
 }
 
@@ -228,11 +238,15 @@ p, ul, .title-section, .entry-plate-dessert-title {
   opacity: 0.8;
 }
 
-#pictogram-1, #pictogram-2, #pictogram-3 {
+#pictogram-1,
+#pictogram-2,
+#pictogram-3 {
   margin-right: 10px;
   color: gray;
 }
-#pictogram-1:hover, #pictogram-2:hover, #pictogram-3:hover {
+#pictogram-1:hover,
+#pictogram-2:hover,
+#pictogram-3:hover {
   color: #9356DC;
 }
 
@@ -252,15 +266,20 @@ p, ul, .title-section, .entry-plate-dessert-title {
     color: white;
     margin-left: 30px;
   }
-  .propose-restaurant, .become-partnair, .legal-mentions, .contact {
+  .propose-restaurant,
+.become-partnair,
+.legal-mentions,
+.contact {
     display: flex;
     align-items: center;
     margin: 0px 0px 7px 0px;
   }
-  .propose, .partnair {
+  .propose,
+.partnair {
     margin: 0px 0px 3px 0px;
   }
-  .mentions, .contact {
+  .mentions,
+.contact {
     margin: 3px 0px 0px 0px;
   }
   #ustensils {
@@ -293,7 +312,10 @@ p, ul, .title-section, .entry-plate-dessert-title {
     color: white;
     margin-left: 33px;
   }
-  .propose-restaurant, .become-partnair, .legal-mentions, .contact {
+  .propose-restaurant,
+.become-partnair,
+.legal-mentions,
+.contact {
     display: flex;
     margin-bottom: 6px;
   }
@@ -340,28 +362,16 @@ p, ul, .title-section, .entry-plate-dessert-title {
   .heart .heart-empty {
     position: absolute;
     right: 20px;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
   }
   .heart .heart-full {
     position: absolute;
     right: 20px;
     background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-font-smoothing: antialiased;
-    /*mise en inline-block pour manipulation de l'élément*/
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 500ms ease-in-out;
+    /*transition*/
+    transition: all 500ms linear;
     opacity: 0;
   }
   .heart:hover .heart-full {
@@ -486,28 +496,16 @@ p, ul, .title-section, .entry-plate-dessert-title {
   .heart .heart-empty {
     position: absolute;
     right: 20px;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
   }
   .heart .heart-full {
     position: absolute;
     right: 20px;
     background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-font-smoothing: antialiased;
-    /*mise en inline-block pour manipulation de l'élément*/
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 500ms ease-in-out;
+    /*transition*/
+    transition: all 500ms linear;
     opacity: 0;
   }
   .heart:hover .heart-full {
@@ -600,14 +598,20 @@ body .specification-seasoning-or-side-dish {
   text-overflow: ellipsis;
 }
 
-body .entry, body .plate, body .dessert {
+body .entry,
+body .plate,
+body .dessert {
   overflow: hidden;
   transition: margin-right 0.5s linear;
 }
-body .entry:hover .check-container, body .plate:hover .check-container, body .dessert:hover .check-container {
+body .entry:hover .check-container,
+body .plate:hover .check-container,
+body .dessert:hover .check-container {
   margin-right: 0px;
 }
-body .entry:hover i, body .plate:hover i, body .dessert:hover i {
+body .entry:hover i,
+body .plate:hover i,
+body .dessert:hover i {
   animation: spin-check 0.5s ease-in;
 }
 body .check-container {
@@ -753,7 +757,8 @@ main {
   color: inherit;
 }
 
-.plate-section, .dessert-section {
+.plate-section,
+.dessert-section {
   margin-top: 40px;
 }
 
@@ -778,7 +783,9 @@ main {
     display: flex;
     width: 100%;
   }
-  .entry-section, .plate-section, .dessert-section {
+  .entry-section,
+.plate-section,
+.dessert-section {
     margin: 10px;
     width: 100%;
     min-width: 200px;

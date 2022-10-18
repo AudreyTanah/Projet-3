@@ -2,6 +2,7 @@
     .footer-ohmyfood-logo {
         font-size: 30px;
     }
+
     footer {
         position: static;
         color: white;
@@ -10,65 +11,86 @@
         height: 100%;
         padding: 20px 0px 20px 0px;
     }
+
     .footer-ohmyfood-logo {
         color: white;
         margin-left: 30px;
     }
-    .propose-restaurant, .become-partnair, .legal-mentions, .contact {
+
+    .propose-restaurant,
+    .become-partnair,
+    .legal-mentions,
+    .contact {
         display: flex;
         align-items: center;
         margin: 0px 0px 7px 0px;
     }
-    .propose, .partnair {
+
+    .propose,
+    .partnair {
         margin: 0px 0px 3px 0px;
     }
-    .mentions, .contact {
+
+    .mentions,
+    .contact {
         margin: 3px 0px 0px 0px;
     }
+
     #ustensils {
-    margin-right: 16px;
+        margin-right: 16px;
     }
+
     #handshake {
         margin-right: 10px;
     }
-    
+
     .link-contact {
         text-decoration: none;
         color: inherit;
     }
-    }    
+}
+
 @media screen and (max-width: 870px) {
     .footer-ohmyfood-logo {
         font-size: 20px;
     }
+
     .page-ohmyfood-logo {
         font-size: 25px;
     }
-    footer {
-    position: static;
-    color: white;
-    background-color: #454343;
-    width: 100%;
-    height: 100%;
-    padding: 20px 0px 20px 0px;
-}
-.footer-ohmyfood-logo {
-    color: white;
-    margin-left: 33px;
-}
-.propose-restaurant, .become-partnair, .legal-mentions, .contact {
-    display: flex;
-    margin-bottom: 6px;
-}
-#ustensils {
-margin-right: 16px;
-}
-#handshake {
-    margin-right: 10px;
-}
 
-.link-contact {
-    text-decoration: none;
-    color: inherit;
-}
+    footer {
+        position: static;
+        color: white;
+        background-color: #454343;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .footer-ohmyfood-logo {
+        color: white;
+        margin-left: 33px;
+    }
+
+    .propose-restaurant,
+    .become-partnair,
+    .legal-mentions,
+    .contact {
+        display: flex;
+        margin-bottom: 6px;
+    }
+
+    #ustensils {
+        margin-right: 16px;
+    }
+
+    #handshake {
+        margin-right: 10px;
+    }
+
+    .link-contact {
+        text-decoration: none;
+        color: inherit;
+    }
 }
