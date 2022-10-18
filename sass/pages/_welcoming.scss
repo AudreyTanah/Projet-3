@@ -4,6 +4,9 @@
 body {
     @include loader 
 }
+.heart {   
+    @include heart
+}
 
     p {
           margin-top: 20px;
@@ -104,14 +107,14 @@ body {
           margin-top: 5px;
       }
 
-    body {
-        @include heart
-    }
-    }
+ }
   /*version mobile first*/
   @media screen and (max-width: 870px) {
 body {
     @include loader
+}
+.heart {
+    @include heart
 }
  
       /*section restaurant*/
@@ -151,6 +154,7 @@ body {
       .card-2,
       .card-3,
       .card-4 {
+        position: relative;
           width: 100%;
           height: 250px;
         box-shadow: $shadow;
@@ -197,27 +201,4 @@ body {
           position: relative;
       }
 
-      .heart {
-          position: relative;
-          width: 25px;
-          height: 25px;
-          transform: scale(0);
-          transition: all transform 4000ms;
-        
-          &:hover i {
-          background: linear-gradient($secondary-color, $primary-color);
-          color: white;
-          font-weight: 600;
-          transform: scale(1);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          width: inherit;
-          position: absolute;
-          right: 3px;
-          top: 2px;
-          bottom: 0px;
-          left: 0px;
-          z-index: 1;
-      }
-    }
 }

@@ -44,8 +44,13 @@ main {
 }
 
 /*supression de la marge pour que tout le texte rentre dans les cards*/
-.entry-plate-dessert-title, .specification-seasoning-or-side-dish {
+.entry-plate-dessert-title {
     margin: 0px;
+    font-size: 16px;
+} 
+.specification-seasoning-or-side-dish {
+    margin: 0px;
+    font-size: 14px;
 }
 .price {
     margin: 37px 6px 0px 0px;
@@ -61,6 +66,10 @@ main {
     color: inherit;
 }
 
+.plate-section, .dessert-section {
+    margin-top: 40px;
+}
+
 
 
 @media screen and (min-width: 869px) and (max-width: 1600px) {
@@ -68,7 +77,7 @@ main {
         font-size: 21px;
     }
     .price {
-       margin-right: 10px;
+       margin-right: 20px;
        font-size: 13px;
     }
     .entry-plate-dessert-title {

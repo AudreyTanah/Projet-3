@@ -17,11 +17,11 @@
 
       @keyframes disappear {
             from {
-                transform: scaleX(1) rotate(0deg);
+                transform: scale(1) rotate(0deg);
             }
  
             to {
-                transform: scaleX(0) rotate(360deg);
+                transform: scale(0) rotate(360deg);
             }
         }
 }
@@ -66,24 +66,41 @@
     position: relative;
     width: 25px;
     height: 25px;
+  }
+.heart-empty {
+    position: absolute;
+    right: 20px;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+  
 }
-
-.heart i:hover {
+.heart-full {
+    position: absolute;
+    right: 20px;
     background: linear-gradient($secondary-color, $primary-color);
-    color: white;
-    font-weight: 600;
-    transform: scale(1.2);
+    -webkit-font-smoothing: antialiased;
+    /*mise en inline-block pour manipulation de l'élément*/
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: inherit;
-    position: absolute;
-    right: 3px;
-    top: 2px;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+}
+&:hover .heart-full {
+    opacity: 1;
+    transform: scale(1.1);
 }
 }
+
 /*mixin ellipsis*/
 @mixin ellipsis {
 .plate-and-side-dish {
