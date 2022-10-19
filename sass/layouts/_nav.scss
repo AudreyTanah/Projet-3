@@ -20,7 +20,7 @@
   background-color: $primary-color;
   color: white;
   position: relative;
-  right: 20px;
+  right: 16px;
 }
 
 .working-nav-bar {
@@ -28,24 +28,22 @@
   align-items: center;
   cursor: pointer;
   margin: 0px 20px 20px 20px;
-  padding: 7px;
+  padding: 20px 3px;
   background-color: #F2F2F2;
   border: 2px #F2F2F2 solid;
   box-shadow: $shadow;
   border-radius: 20px;
 
-  &:hover {
+  &:hover .pictogram{
     opacity: 0.8;
-  }
-}
-
-#pictogram-1,
-#pictogram-2,
-#pictogram-3 {
-  margin-right: 10px;
-  color: gray;
-
-  &:hover {
     color: $primary-color;
   }
+}
+.nav {
+  font-weight: 600;
+}
+
+.pictogram {
+  margin-right: 20px;
+  color: gray;
 }

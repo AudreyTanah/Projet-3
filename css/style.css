@@ -128,6 +128,7 @@ h3 {
 }
 
 .arrow {
+  color: black;
   margin-left: 30px;
   font-size: 20px;
 }
@@ -220,7 +221,7 @@ h3 {
   background-color: #9356DC;
   color: white;
   position: relative;
-  right: 20px;
+  right: 16px;
 }
 
 .working-nav-bar {
@@ -228,26 +229,24 @@ h3 {
   align-items: center;
   cursor: pointer;
   margin: 0px 20px 20px 20px;
-  padding: 7px;
+  padding: 20px 3px;
   background-color: #F2F2F2;
   border: 2px #F2F2F2 solid;
   box-shadow: 2px 5px 16px 0px #888b8e;
   border-radius: 20px;
 }
-.working-nav-bar:hover {
+.working-nav-bar:hover .pictogram {
   opacity: 0.8;
+  color: #9356DC;
 }
 
-#pictogram-1,
-#pictogram-2,
-#pictogram-3 {
-  margin-right: 10px;
-  color: gray;
+.nav {
+  font-weight: 600;
 }
-#pictogram-1:hover,
-#pictogram-2:hover,
-#pictogram-3:hover {
-  color: #9356DC;
+
+.pictogram {
+  margin-right: 20px;
+  color: gray;
 }
 
 @media screen and (min-width: 869px) and (max-width: 1600px) {
@@ -529,11 +528,12 @@ h3 {
     position: absolute;
     color: green;
     background-color: #99E2D0;
+    font-weight: 600;
     text-align: center;
     z-index: 99;
-    right: 50px;
-    margin: 10px;
-    padding: 0px 6px 0px 6px;
+    right: 16px;
+    margin-top: 20px;
+    padding: 6px 12px;
   }
   .new {
     margin: 0px;
