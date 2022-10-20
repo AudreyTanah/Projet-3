@@ -9,7 +9,7 @@
     background: linear-gradient(#FF79DA, #9356DC);
     border-radius: 30px;
     box-shadow: $shadow;
-    transition: transform all 2.5s;
+    transition: all 500ms ease-in-out;
 
 
     &:hover {
@@ -36,6 +36,7 @@
     width: 70%;
     max-width: 270px;
     min-width: 200px;
+    transition: all 500ms ease-in-out;
 
     &:hover {
         background: linear-gradient(lighten(#FF79DA, 5%), lighten(#9356DC, 5%));

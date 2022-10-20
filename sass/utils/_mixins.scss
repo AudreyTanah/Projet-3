@@ -12,16 +12,17 @@
         justify-content: center;
         background: rgba(0, 0, 0, 0.5);
         opacity: 1;
-        animation: disappear 2s 1s linear forwards;
+        transform-origin: top;
+        animation: disappear 2s 1s ease-out forwards;
     }
 
     @keyframes disappear {
         from {
-            transform: scale(1) rotate(0deg);
+            transform: scale(1);
         }
 
         to {
-            transform: scale(0) rotate(360deg);
+            transform: scale(0);
         }
     }
 }
@@ -70,17 +71,20 @@
     .heart {
         position: relative;
         width: 25px;
-        height: 25px;
     }
 
     .heart-empty {
         position: absolute;
         right: 20px;
+        font-size: 25px;
+        bottom: 21px;
     }
 
     .heart-full {
         position: absolute;
         right: 20px;
+        font-size: 25px;
+        bottom: 21px;
         background: linear-gradient($secondary-color, $primary-color);
         /*permet par cette action de mettre le background color en linear-gradient*/
         -webkit-background-clip: text;

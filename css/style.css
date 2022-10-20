@@ -91,7 +91,7 @@ h3 {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   box-shadow: 2px 5px 16px 0px #888b8e;
-  transition: transform all 2.5s;
+  transition: all 500ms ease-in-out;
 }
 .explore:hover {
   background: linear-gradient(#ff93e1, #a16be0);
@@ -115,6 +115,7 @@ h3 {
   width: 70%;
   max-width: 270px;
   min-width: 200px;
+  transition: all 500ms ease-in-out;
 }
 .command:hover {
   background: linear-gradient(#ff93e1, #a16be0);
@@ -190,7 +191,7 @@ h3 {
 }
 
 .reserve {
-  margin: 30px 30px 0px 30px;
+  margin: 0px 30px 0px 30px;
 }
 
 .reserve,
@@ -230,14 +231,22 @@ h3 {
   cursor: pointer;
   margin: 0px 20px 20px 20px;
   padding: 20px 3px;
-  background-color: #F2F2F2;
   border: 2px #F2F2F2 solid;
   box-shadow: 2px 5px 16px 0px #888b8e;
   border-radius: 20px;
+  transition: all 300ms ease-in-out;
 }
 .working-nav-bar:hover .pictogram {
-  opacity: 0.8;
   color: #9356DC;
+}
+
+.working-nav-bar {
+  background-color: #F9F9F9;
+  opacity: 0.9;
+}
+.working-nav-bar:hover {
+  opacity: 1;
+  background-color: #F2F2F2;
 }
 
 .nav {
@@ -343,28 +352,32 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    animation: disappear 2s 1s linear forwards;
+    transform-origin: top;
+    animation: disappear 2s 1s ease-out forwards;
   }
   @keyframes disappear {
     from {
-      transform: scale(1) rotate(0deg);
+      transform: scale(1);
     }
     to {
-      transform: scale(0) rotate(360deg);
+      transform: scale(0);
     }
   }
   .heart .heart {
     position: relative;
     width: 25px;
-    height: 25px;
   }
   .heart .heart-empty {
     position: absolute;
     right: 20px;
+    font-size: 25px;
+    bottom: 21px;
   }
   .heart .heart-full {
     position: absolute;
     right: 20px;
+    font-size: 25px;
+    bottom: 21px;
     background: linear-gradient(#FF79DA, #9356DC);
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
@@ -477,28 +490,32 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    animation: disappear 2s 1s linear forwards;
+    transform-origin: top;
+    animation: disappear 2s 1s ease-out forwards;
   }
   @keyframes disappear {
     from {
-      transform: scale(1) rotate(0deg);
+      transform: scale(1);
     }
     to {
-      transform: scale(0) rotate(360deg);
+      transform: scale(0);
     }
   }
   .heart .heart {
     position: relative;
     width: 25px;
-    height: 25px;
   }
   .heart .heart-empty {
     position: absolute;
     right: 20px;
+    font-size: 25px;
+    bottom: 21px;
   }
   .heart .heart-full {
     position: absolute;
     right: 20px;
+    font-size: 25px;
+    bottom: 21px;
     background: linear-gradient(#FF79DA, #9356DC);
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
