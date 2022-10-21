@@ -23,7 +23,7 @@
   opacity: 1;
   width: 100%;
   height: 100%;
-  animation: disparition 3s ease-in;
+  animation: disparition 4s ease-in;
 }
 
 @keyframes disparition {
@@ -109,7 +109,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 3px 10px 3px;
+  padding: 15px 7px;
   margin: 80px auto 20px auto;
   box-shadow: 2px 5px 16px 0px #888b8e;
   width: 70%;
@@ -258,7 +258,7 @@ h3 {
   color: gray;
 }
 
-@media screen and (min-width: 869px) and (max-width: 1600px) {
+@media screen and (min-width: 869px) and (max-width: 1920px) {
   .footer-ohmyfood-logo {
     font-size: 30px;
   }
@@ -339,7 +339,7 @@ h3 {
   }
 }
 /*version Desktop et tablette*/
-@media screen and (min-width: 869px) and (max-width: 1600px) {
+@media screen and (min-width: 869px) and (max-width: 1920px) {
   body .loader {
     position: fixed;
     top: 0;
@@ -352,7 +352,6 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    transform-origin: top;
     animation: disappear 2s 1s ease-out forwards;
   }
   @keyframes disappear {
@@ -360,7 +359,8 @@ h3 {
       transform: scale(1);
     }
     to {
-      transform: scale(0);
+      transform: scale(1);
+      visibility: hidden;
     }
   }
   .heart .heart {
@@ -371,13 +371,13 @@ h3 {
     position: absolute;
     right: 20px;
     font-size: 25px;
-    bottom: 21px;
+    bottom: 25px;
   }
   .heart .heart-full {
     position: absolute;
     right: 20px;
     font-size: 25px;
-    bottom: 21px;
+    bottom: 25px;
     background: linear-gradient(#FF79DA, #9356DC);
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
@@ -490,7 +490,6 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    transform-origin: top;
     animation: disappear 2s 1s ease-out forwards;
   }
   @keyframes disappear {
@@ -498,7 +497,8 @@ h3 {
       transform: scale(1);
     }
     to {
-      transform: scale(0);
+      transform: scale(1);
+      visibility: hidden;
     }
   }
   .heart .heart {
@@ -509,13 +509,13 @@ h3 {
     position: absolute;
     right: 20px;
     font-size: 25px;
-    bottom: 21px;
+    bottom: 25px;
   }
   .heart .heart-full {
     position: absolute;
     right: 20px;
     font-size: 25px;
-    bottom: 21px;
+    bottom: 25px;
     background: linear-gradient(#FF79DA, #9356DC);
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
@@ -779,7 +779,7 @@ main {
   margin-top: 40px;
 }
 
-@media screen and (min-width: 869px) and (max-width: 1600px) {
+@media screen and (min-width: 869px) and (max-width: 1920px) {
   .heart-page {
     font-size: 21px;
   }
