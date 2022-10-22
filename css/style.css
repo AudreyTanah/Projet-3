@@ -7,7 +7,7 @@
   border: 9px solid #ddd;
   border-top-color: #99E2D0;
   border-radius: 50%;
-  animation: loading 2s ease-in-out forwards;
+  animation: loading 1s infinite;
 }
 
 @keyframes loading {
@@ -352,7 +352,7 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    animation: disappear 2s 1s ease-out forwards;
+    animation: disappear 2s ease-out forwards;
   }
   @keyframes disappear {
     from {
@@ -369,15 +369,25 @@ h3 {
   }
   .heart .heart-empty {
     position: absolute;
-    right: 20px;
+    right: 5px;
     font-size: 25px;
-    bottom: 25px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
   }
   .heart .heart-full {
     position: absolute;
-    right: 20px;
+    right: 5px;
     font-size: 25px;
-    bottom: 25px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(#FF79DA, #9356DC);
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
@@ -387,6 +397,10 @@ h3 {
     opacity: 0;
   }
   .heart:hover .heart-full {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .heart:active .heart-full {
     opacity: 1;
     transform: scale(1.1);
   }
@@ -490,7 +504,7 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-    animation: disappear 2s 1s ease-out forwards;
+    animation: disappear 2s ease-out forwards;
   }
   @keyframes disappear {
     from {
@@ -507,15 +521,25 @@ h3 {
   }
   .heart .heart-empty {
     position: absolute;
-    right: 20px;
+    right: 5px;
     font-size: 25px;
-    bottom: 25px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
   }
   .heart .heart-full {
     position: absolute;
-    right: 20px;
+    right: 5px;
     font-size: 25px;
-    bottom: 25px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(#FF79DA, #9356DC);
     /*permet par cette action de mettre le background color en linear-gradient*/
     -webkit-background-clip: text;
@@ -525,6 +549,10 @@ h3 {
     opacity: 0;
   }
   .heart:hover .heart-full {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .heart:active .heart-full {
     opacity: 1;
     transform: scale(1.1);
   }
