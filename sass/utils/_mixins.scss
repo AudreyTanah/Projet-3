@@ -12,7 +12,7 @@
         justify-content: center;
         background: rgba(0, 0, 0, 0.5);
         opacity: 1;
-        animation: disappear 2s 1s ease-out forwards;
+        animation: disappear 2s ease-out forwards;
     }
 
     @keyframes disappear {
@@ -34,7 +34,7 @@
     border: 9px solid #ddd;
     border-top-color: $tertiary-color;
     border-radius: 50%;
-    animation: loading 2s ease-in-out forwards;
+    animation: loading  1s infinite;
 }
 
 @keyframes loading {
@@ -98,6 +98,10 @@
         opacity: 1;
         transform: scale(1.1);
     }
+    &:active .heart-full {
+        opacity: 1;
+        transform: scale(1.1);
+}
 }
 
 /*mixin ellipsis*/
