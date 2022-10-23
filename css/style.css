@@ -34,7 +34,8 @@
     opacity: 1;
   }
 }
-/*mixin heart*/
+/*mixin heart-welcoming.scss*/
+/*mixin heart-page*/
 /*mixin ellipsis*/
 /*mixin check*/
 /*mixin animation plats*/
@@ -369,9 +370,9 @@ h3 {
   }
   .heart .heart-empty {
     position: absolute;
-    right: 5px;
+    right: 10px;
     font-size: 25px;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,9 +381,9 @@ h3 {
   }
   .heart .heart-full {
     position: absolute;
-    right: 5px;
+    right: 10px;
     font-size: 25px;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,9 +522,9 @@ h3 {
   }
   .heart .heart-empty {
     position: absolute;
-    right: 5px;
+    right: 10px;
     font-size: 25px;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,9 +533,9 @@ h3 {
   }
   .heart .heart-full {
     position: absolute;
-    right: 5px;
+    right: 10px;
     font-size: 25px;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -736,6 +737,48 @@ body .plate.delay-10 {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.heart-page .heart-page {
+  position: relative;
+  width: 25px;
+}
+.heart-page .heart-page-empty {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.heart-page .heart-page-full {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  /*permet par cette action de mettre le background color en linear-gradient*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*transition*/
+  transition: all 500ms linear;
+  opacity: 0;
+}
+.heart-page:hover .heart-page-full {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.heart-page:active .heart-page-full {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /*main*/

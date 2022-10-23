@@ -10,6 +10,9 @@ body {
 body {
     @include plate-animation
 }
+.heart-page {
+    @include heart-page
+}
 
 /*main*/
 main {
