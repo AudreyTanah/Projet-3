@@ -739,48 +739,6 @@ body .plate.delay-10 {
   }
 }
 
-.heart-page .heart-page {
-  position: relative;
-  width: 25px;
-}
-.heart-page .heart-page-empty {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-}
-.heart-page .heart-page-full {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  /*permet par cette action de mettre le background color en linear-gradient*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /*transition*/
-  transition: all 500ms linear;
-  opacity: 0;
-}
-.heart-page:hover .heart-page-full {
-  opacity: 1;
-  transform: scale(1.1);
-}
-.heart-page:active .heart-page-full {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
 /*main*/
 main {
   width: 100%;
@@ -851,8 +809,47 @@ main {
 }
 
 @media screen and (min-width: 869px) and (max-width: 1920px) {
-  .heart-page {
-    font-size: 21px;
+  .heart-page .heart-page {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .heart-page .heart-page-empty {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+  }
+  .heart-page .heart-page-full {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    /*permet par cette action de mettre le background color en linear-gradient*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*transition*/
+    transition: all 500ms linear;
+    opacity: 0;
+  }
+  .heart-page:hover .heart-page-full {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .heart-page:active .heart-page-full {
+    opacity: 1;
+    transform: scale(1.1);
   }
   .price {
     margin-right: 20px;
@@ -880,6 +877,51 @@ main {
   }
   .plate {
     min-width: 200px;
+  }
+}
+/*version mobile first pour le coeur*/
+@media screen and (max-width: 870px) {
+  .heart-page .heart-page {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .heart-page .heart-page-empty {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+  }
+  .heart-page .heart-page-full {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    /*permet par cette action de mettre le background color en linear-gradient*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*transition*/
+    transition: all 500ms linear;
+    opacity: 0;
+  }
+  .heart-page:hover .heart-page-full {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .heart-page:active .heart-page-full {
+    opacity: 1;
+    transform: scale(1.1);
   }
 }
 
