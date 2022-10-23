@@ -84,7 +84,7 @@ main {
 
 @media screen and (min-width: 869px) and (max-width: 1920px) {
     .heart-page {
-        @include heart-page;
+        @include heart-page
     }
 
     .price {
