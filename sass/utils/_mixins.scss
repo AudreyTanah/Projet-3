@@ -31,6 +31,7 @@
     width: 100px;
     height: 100px;
     content: "";
+    /*indispensable avec la propriété ::after ou ::before*/
     border: 9px solid #ddd;
     border-top-color: $tertiary-color;
     border-radius: 50%;
@@ -114,6 +115,7 @@
         transform: scale(1.1);
     }
 }
+
 /*mixin heart-page*/
 @mixin heart-page {
     .heart-page {
@@ -185,18 +187,19 @@
     .plate,
     .dessert {
         overflow: hidden;
-        transition: margin-right 0.5s linear;
+        white-space: nowrap;
 
         &:hover .check-container {
-            margin-right: 0px;
+            margin: 0px;
         }
 
         &:hover i {
-            animation: spin-check 0.5s ease-in;
+            animation: spin-check 0.4s ease-in;
         }
     }
 
     .check-container {
+        left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -206,7 +209,12 @@
         margin-right: -50px;
         width: 50px;
         height: 100%;
+        transition: margin-right 400ms linear;
+
+
     }
+
+
 
     @keyframes spin-check {
         from {
@@ -235,8 +243,6 @@
 @mixin plate-animation {
     .plate {
         opacity: 0;
-        /*animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);*/
-        animation-fill-mode: both;
         animation: apparition 3s forwards;
         transform: scale(0);
 
@@ -284,6 +290,7 @@
     @keyframes apparition {
         from {
             transform: translateY(50%);
+            /*apparition*/
             opacity: 0;
         }
 

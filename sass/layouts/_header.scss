@@ -1,3 +1,6 @@
+header {
+    width: 100%;
+}
 /*header pages restaurant (pas besoin de media querries car nommage html propre aux pages restaurant*/
 .page-ohmyfood-logo {
     font-size: 30px;
@@ -49,22 +52,34 @@
 }
 
 .city-research {
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #e8e2e2;
+    background-color: #EAEAEA;
     padding: 20px;
 }
 
+.location-dot {
+    margin-left: 10px;
+}
 .city {
-    background-color: #e8e2e2;
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #EAEAEA;
 }
 
 .contain-1-header {
+    width: 100%;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#title-reserve {
+    margin-top: 30px;
 }
 
 .reserve {
@@ -76,4 +91,8 @@
 .discover,
 .explore {
     text-align: center;
+}
+
+#title-working {
+    margin-left: 20px;
 }

@@ -122,9 +122,10 @@ main {
     }
 
 }
+
 /*version mobile first pour le coeur*/
 @media screen and (max-width: 870px) {
     .heart-page {
         @include heart-page
-    }  
+    }
 }

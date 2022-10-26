@@ -1,6 +1,8 @@
 /*importation police texte*/
 p,
 ul,
+h1,
+h2,
 .title-section,
 .entry-plate-dessert-title {
     font-family: 'Roboto', sans-serif;
@@ -10,12 +12,13 @@ ul,
 .logo,
 .footer-ohmyfood-logo,
 .page-ohmyfood-logo,
-h1,
-h2,
-h3 {
+.title-menu {
     font-family: 'Shrikhand', cursive;
 }
 
+#title-reserve {
+    font-size: 23px;
+}
 /*taille titre menu*/
 .title-menu {
     font-size: 27px;

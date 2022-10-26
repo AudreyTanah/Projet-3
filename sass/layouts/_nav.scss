@@ -38,14 +38,17 @@
     color: $primary-color;
   }
 }
+
 .working-nav-bar {
   background-color: #F9F9F9;
   opacity: 0.9;
-&:hover {
-  opacity: 1;
-  background-color: #F2F2F2;
+
+  &:hover {
+    opacity: 1;
+    background-color: #F2F2F2;
+  }
 }
-}
+
 .nav {
   font-weight: 600;
 }
