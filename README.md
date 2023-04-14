@@ -1,4 +1,4 @@
-# Projet-3
+Projet-3 Ohmyfood
 
 J'ai intégré Ohmyfood en tant que développeur junior. Il s’agit d’une jeune startup qui voudrait s'imposer sur le marché de la restauration. Déjà présente à New-York, elle souhaite désormais faire sa place à Paris. 
 
